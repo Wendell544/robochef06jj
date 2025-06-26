@@ -24,16 +24,25 @@
         </div>
         
         <div class="interacao">
-            <p>Oi! O que você tem aí na sua geladeira ou armário?</p>
-            <div class="input-container">
-                <textarea id="ingredientesInput" placeholder="Ex: banana, leite, aveia, arroz, frango, tomate..."></textarea>
+            <div id="mensagemRobo">
+                <p>Oi! Vou te ajudar a preparar uma refeição saudável. Aqui estão minhas sugestões para este horário:</p>
             </div>
-            <button id="buscarReceitas">Buscar Receitas</button>
+            
+            <div class="botoes-periodo">
+                <button class="btn-periodo" data-periodo="manha">Café da Manhã</button>
+                <button class="btn-periodo" data-periodo="almoco">Almoço</button>
+                <button class="btn-periodo" data-periodo="tarde">Lanche da Tarde</button>
+                <button class="btn-periodo" data-periodo="noite">Jantar</button>
+            </div>
         </div>
         
         <div class="resultados">
             <h2 class="resultados-titulo" id="resultadosTitulo">Receitas Sugeridas</h2>
             <div id="resultadosReceitas"></div>
+        </div>
+        
+        <div class="aviso-horario" id="avisoHorario">
+            <p>💡 Dica: É melhor consumir refeições adequadas ao horário para manter uma alimentação balanceada!</p>
         </div>
         
         <footer>
