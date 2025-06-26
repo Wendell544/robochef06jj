@@ -1,0 +1,269 @@
+:root {
+    --rosa: #FF9AA2;
+    --laranja: #FFD3B6;
+    --verde-claro: #E2F0CB;
+    --azul-claro: #B5EAD7;
+    --roxo-claro: #C7CEEA;
+    --branco: #FFFFFF;
+    --cinza: #F5F5F5;
+    --cinza-escuro: #333333;
+    --sombra: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--branco);
+    color: var(--cinza-escuro);
+    line-height: 1.6;
+    padding: 15px;
+    background-image: linear-gradient(135deg, rgba(255, 154, 162, 0.05) 0%, rgba(255, 211, 182, 0.05) 100%);
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: var(--branco);
+    border-radius: 25px;
+    box-shadow: 0 8px 20px var(--sombra);
+    overflow: hidden;
+}
+
+header {
+    background-color: var(--rosa);
+    color: var(--branco);
+    text-align: center;
+    padding: 25px 20px;
+    position: relative;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.subtitulo {
+    font-size: 1rem;
+    opacity: 0.9;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.horario-atual {
+    background-color: var(--laranja);
+    color: var(--cinza-escuro);
+    text-align: center;
+    padding: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.interacao {
+    padding: 25px 20px;
+}
+
+.interacao p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--cinza-escuro);
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--laranja);
+    border-radius: 18px;
+    resize: none;
+    font-size: 1rem;
+    min-height: 120px;
+    background-color: var(--cinza);
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--rosa);
+    box-shadow: 0 0 0 3px rgba(255, 154, 162, 0.2);
+}
+
+button {
+    background-color: var(--rosa);
+    color: var(--branco);
+    border: none;
+    padding: 14px 28px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 154, 162, 0.3);
+}
+
+button:hover {
+    background-color: #ff7b85;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 154, 162, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.resultados {
+    padding: 0 20px 30px;
+}
+
+.resultados-titulo {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--rosa);
+    font-size: 1.4rem;
+    padding-top: 10px;
+}
+
+.receita {
+    background-color: var(--cinza);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px var(--sombra);
+    transition: transform 0.3s ease;
+}
+
+.receita:hover {
+    transform: translateY(-5px);
+}
+
+.receita h3 {
+    color: var(--rosa);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.receita h4 {
+    margin: 15px 0 8px 0;
+    color: var(--cinza-escuro);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.receita ul, .receita ol {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.receita li {
+    margin-bottom: 6px;
+}
+
+.receita p {
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+.info-nutricional {
+    display: flex;
+    gap: 15px;
+    background-color: rgba(255, 211, 182, 0.3);
+    padding: 10px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.info-valor {
+    font-weight: 700;
+    color: var(--rosa);
+}
+
+.info-rotulo {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.nenhuma-receita {
+    text-align: center;
+    padding: 30px;
+    color: var(--cinza-escuro);
+    font-size: 1.1rem;
+    background-color: var(--cinza);
+    border-radius: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.9rem;
+    color: var(--cinza-escuro);
+    opacity: 0.8;
+    background-color: var(--laranja);
+    margin-top: 5px;
+}
+
+.pwa-install {
+    background-color: var(--rosa);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .horario-atual {
+        font-size: 1rem;
+    }
+    
+    .container {
+        border-radius: 20px;
+    }
+}

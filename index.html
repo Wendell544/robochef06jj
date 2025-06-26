@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assistente culinário para ajudar a se alimentar melhor com o que você tem em casa">
+    <meta name="theme-color" content="#FF9AA2">
+    <title>RoboChef Saudável</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍳</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍳</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍳 RoboChef Saudável</h1>
+            <p class="subtitulo">Seu assistente culinário para uma alimentação saudável</p>
+        </header>
+        
+        <div class="horario-atual">
+            <span>⏰</span>
+            <p id="periodo"></p>
+        </div>
+        
+        <div class="interacao">
+            <p>Oi! O que você tem aí na sua geladeira ou armário?</p>
+            <div class="input-container">
+                <textarea id="ingredientesInput" placeholder="Ex: banana, leite, aveia, arroz, frango, tomate..."></textarea>
+            </div>
+            <button id="buscarReceitas">Buscar Receitas</button>
+        </div>
+        
+        <div class="resultados">
+            <h2 class="resultados-titulo" id="resultadosTitulo">Receitas Sugeridas</h2>
+            <div id="resultadosReceitas"></div>
+        </div>
+        
+        <footer>
+            <p>RoboChef Saudável © 2023 - Seu assistente culinário pessoal</p>
+            <p class="pwa-install">💾 Adicione este app na sua tela inicial para acesso rápido!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
