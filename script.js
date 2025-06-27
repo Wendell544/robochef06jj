@@ -867,9 +867,25 @@ function getNomePeriodo(periodo) {
     return periodos[periodo];
 }
 
+// Função para obter o período atual do dia
+function getPeriodoAtual() {
+    const horaAtual = new Date().getHours();
+    if (horaAtual >= 6 && horaAtual < 10) return 'manha';
+    if (horaAtual >= 10 && horaAtual < 14) return 'almoco';
+    if (horaAtual >= 14 && horaAtual < 18) return 'tarde';
+    return 'noite';
+}
+
 function mostrarReceitas(periodo) {
     periodoAtual = periodo;
     const todasReceitas = getReceitasPorPeriodo(periodo);
+    
+    // Verificar se o período selecionado é o atual
+    const periodoDoDia = getPeriodoAtual();
+    if (periodo !== periodoDoDia) {
+        const mensagemMotivacional = `Estou vendo que você está planejando ${getNomePeriodo(periodo).toLowerCase()} com antecedência! Isso é ótimo para manter uma rotina saudável. Vamos às opções:`;
+        adicionarMensagem(mensagemMotivacional, false);
+    }
     
     // Selecionar 2 receitas aleatórias que ainda não foram mostradas
     let receitasDisponiveis = todasReceitas.filter(r => !receitasMostradas.includes(r.nome));
