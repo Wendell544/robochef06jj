@@ -3,46 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Assistente culinário para ajudar a se alimentar melhor com o que você tem em casa">
+    <meta name="description" content="Assistente culinário inteligente para ajudar a se alimentar melhor">
     <meta name="theme-color" content="#FF9AA2">
     <title>RoboChef Saudável</title>
     <link rel="manifest" href="manifest.json">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍳</text></svg>">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍳</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🍳 RoboChef Saudável</h1>
-            <p class="subtitulo">Seu assistente culinário para uma alimentação saudável</p>
+            <div class="robo-header">
+                <div class="robo-avatar">🤖</div>
+                <div>
+                    <h1>RoboChef Saudável</h1>
+                    <p class="subtitulo">Seu assistente culinário inteligente</p>
+                </div>
+            </div>
+            <div class="status">
+                <span id="statusIndicator">●</span>
+                <span id="statusText">Online</span>
+            </div>
         </header>
         
-        <div class="horario-atual">
-            <span>⏰</span>
-            <p id="periodo"></p>
-        </div>
-        
-        <div class="interacao">
-            <div id="mensagemRobo">
-                <p>Oi! Vou te ajudar a preparar uma refeição saudável. Aqui estão minhas sugestões para este horário:</p>
-            </div>
-            
-            <div class="botoes-periodo">
-                <button class="btn-periodo" data-periodo="manha">Café da Manhã</button>
-                <button class="btn-periodo" data-periodo="almoco">Almoço</button>
-                <button class="btn-periodo" data-periodo="tarde">Lanche da Tarde</button>
-                <button class="btn-periodo" data-periodo="noite">Jantar</button>
+        <div class="chat-container" id="chatContainer">
+            <div class="mensagem robo">
+                <div class="avatar">🤖</div>
+                <div class="texto">
+                    <p>Olá! Eu sou o RoboChef 🤖 Estou aqui para te ajudar a preparar refeições saudáveis com o que você tem em casa. Qual seu nome?</p>
+                </div>
             </div>
         </div>
         
-        <div class="resultados">
-            <h2 class="resultados-titulo" id="resultadosTitulo">Receitas Sugeridas</h2>
-            <div id="resultadosReceitas"></div>
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Digite sua mensagem aqui..." autocomplete="off">
+            <button id="sendButton">➤</button>
         </div>
         
-        <div class="aviso-horario" id="avisoHorario">
-            <p>💡 Dica: É melhor consumir refeições adequadas ao horário para manter uma alimentação balanceada!</p>
+        <div class="sugestoes-rapidas" id="quickSuggestions">
+            <button class="btn-sugestao" data-sugestao="manha">Café da Manhã</button>
+            <button class="btn-sugestao" data-sugestao="almoco">Almoço</button>
+            <button class="btn-sugestao" data-sugestao="tarde">Lanche</button>
+            <button class="btn-sugestao" data-sugestao="noite">Jantar</button>
         </div>
         
         <footer>

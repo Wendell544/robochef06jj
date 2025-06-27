@@ -7,7 +7,9 @@
     --branco: #FFFFFF;
     --cinza: #F5F5F5;
     --cinza-escuro: #333333;
+    --cinza-chat: #F0F0F0;
     --sombra: rgba(0, 0, 0, 0.1);
+    --sombra-chat: rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -23,258 +25,332 @@ body {
     line-height: 1.6;
     padding: 15px;
     background-image: linear-gradient(135deg, rgba(255, 154, 162, 0.05) 0%, rgba(255, 211, 182, 0.05) 100%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
-    max-width: 500px;
+    max-width: 100%;
+    height: 100%;
     margin: 0 auto;
     background-color: var(--branco);
     border-radius: 25px;
     box-shadow: 0 8px 20px var(--sombra);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
 }
 
 header {
     background-color: var(--rosa);
     color: var(--branco);
-    text-align: center;
-    padding: 25px 20px;
+    padding: 15px 20px;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.robo-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.robo-avatar {
+    font-size: 2.5rem;
+    background: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 header h1 {
-    font-size: 1.8rem;
-    margin-bottom: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 3px;
 }
 
 .subtitulo {
-    font-size: 1rem;
+    font-size: 0.9rem;
     opacity: 0.9;
-    max-width: 300px;
-    margin: 0 auto;
 }
 
-.horario-atual {
+.status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+}
+
+#statusIndicator {
+    color: #4CAF50;
+    font-size: 1.2rem;
+}
+
+.chat-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--cinza-chat);
+}
+
+.mensagem {
+    display: flex;
+    gap: 12px;
+    max-width: 85%;
+    animation: fadeIn 0.3s ease;
+}
+
+.mensagem.usuario {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.mensagem.robo .texto {
+    background-color: var(--branco);
+    border-radius: 18px 18px 18px 4px;
+}
+
+.mensagem.usuario .texto {
+    background-color: var(--azul-claro);
+    border-radius: 18px 18px 4px 18px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     background-color: var(--laranja);
-    color: var(--cinza-escuro);
-    text-align: center;
-    padding: 12px;
-    font-weight: 600;
-    font-size: 1.1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    font-size: 1.5rem;
+    flex-shrink: 0;
 }
 
-.interacao {
-    padding: 25px 20px;
+.texto {
+    padding: 15px;
+    box-shadow: 0 2px 8px var(--sombra-chat);
 }
 
-.interacao p {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    text-align: center;
-    color: var(--cinza-escuro);
+.texto p {
+    margin-bottom: 8px;
+    line-height: 1.5;
 }
 
-.botoes-periodo {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.btn-periodo {
-    background-color: var(--azul-claro);
-    color: var(--cinza-escuro);
-    border: none;
-    padding: 10px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.btn-periodo:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.btn-periodo:active {
-    transform: translateY(0);
-}
-
-.resultados {
-    padding: 0 20px 30px;
-}
-
-.resultados-titulo {
-    text-align: center;
-    margin-bottom: 20px;
-    color: var(--rosa);
-    font-size: 1.4rem;
-    padding-top: 10px;
+.texto p:last-child {
+    margin-bottom: 0;
 }
 
 .receita {
-    background-color: var(--cinza);
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 10px var(--sombra);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.receita:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
-.receita.ativa {
-    border: 2px solid var(--rosa);
-    background-color: rgba(255, 154, 162, 0.1);
+    background-color: var(--verde-claro);
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .receita h3 {
     color: var(--rosa);
-    margin-bottom: 15px;
-    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.receita h4 {
-    margin: 15px 0 8px 0;
+.info-receita {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.info-item span:first-child {
+    font-weight: bold;
+    color: var(--rosa);
+}
+
+.ingredientes, .preparo {
+    margin-top: 15px;
+}
+
+.ingredientes h4, .preparo h4 {
+    margin-bottom: 8px;
     color: var(--cinza-escuro);
-    font-size: 1.1rem;
     display: flex;
     align-items: center;
     gap: 6px;
 }
 
-.receita ul, .receita ol {
-    margin-left: 20px;
-    margin-bottom: 10px;
+ul {
+    padding-left: 20px;
 }
 
-.receita li {
-    margin-bottom: 6px;
-}
-
-.receita p {
+li {
     margin-bottom: 5px;
-    line-height: 1.5;
 }
 
-.info-nutricional {
+.input-area {
     display: flex;
-    gap: 15px;
-    background-color: rgba(255, 211, 182, 0.3);
-    padding: 10px;
-    border-radius: 12px;
-    margin-top: 10px;
-}
-
-.info-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-}
-
-.info-valor {
-    font-weight: 700;
-    color: var(--rosa);
-}
-
-.info-rotulo {
-    font-size: 0.8rem;
-    opacity: 0.8;
-}
-
-.detalhes-receita {
-    display: none;
-    padding-top: 15px;
-}
-
-.receita.ativa .detalhes-receita {
-    display: block;
-}
-
-.aviso-horario {
-    background-color: var(--verde-claro);
     padding: 15px;
-    text-align: center;
-    font-size: 0.9rem;
-    border-radius: 15px;
-    margin: 0 20px 20px;
-    display: none;
+    gap: 10px;
+    background-color: var(--branco);
+    border-top: 1px solid #eee;
 }
 
-.aviso-horario.mostrar {
-    display: block;
+#userInput {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+#userInput:focus {
+    border-color: var(--rosa);
+    box-shadow: 0 0 0 2px rgba(255, 154, 162, 0.2);
+}
+
+#sendButton {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--rosa);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+#sendButton:hover {
+    background-color: #ff7a85;
+    transform: scale(1.05);
+}
+
+.sugestoes-rapidas {
+    display: flex;
+    gap: 8px;
+    padding: 0 15px 15px;
+    flex-wrap: wrap;
+}
+
+.btn-sugestao {
+    background-color: var(--roxo-claro);
+    color: var(--cinza-escuro);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn-sugestao:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 footer {
     text-align: center;
-    padding: 25px 20px;
-    font-size: 0.9rem;
+    padding: 15px;
+    font-size: 0.8rem;
     color: var(--cinza-escuro);
     opacity: 0.8;
     background-color: var(--laranja);
-    margin-top: 5px;
+    margin-top: auto;
 }
 
 .pwa-install {
     background-color: var(--rosa);
     color: white;
-    padding: 8px 15px;
-    border-radius: 20px;
+    padding: 5px 10px;
+    border-radius: 15px;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    margin-top: 10px;
+    gap: 5px;
+    margin-top: 8px;
+    font-size: 0.8rem;
 }
 
 /* Animações */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-.fade-in {
-    animation: fadeIn 0.6s ease forwards;
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
 }
 
 /* Responsividade */
 @media (max-width: 500px) {
+    .robo-avatar {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+    
     header h1 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     
-    .horario-atual {
-        font-size: 1rem;
+    .status {
+        font-size: 0.8rem;
     }
     
-    .container {
-        border-radius: 20px;
+    .chat-container {
+        padding: 15px;
     }
     
-    .botoes-periodo {
-        flex-direction: column;
+    .mensagem {
+        max-width: 90%;
     }
     
-    .btn-periodo {
-        width: 100%;
+    .avatar {
+        width: 35px;
+        height: 35px;
+        font-size: 1.3rem;
+    }
+    
+    .texto {
+        padding: 12px;
+    }
+    
+    .input-area {
+        padding: 12px;
+    }
+    
+    #userInput {
+        padding: 10px 15px;
+    }
+    
+    #sendButton {
+        width: 40px;
+        height: 40px;
     }
 }
