@@ -1,793 +1,437 @@
-// Array de receitas com mais detalhes
+
+// Array de receitas para café da manhã (15 receitas)
 const receitasManha = [
     {
-        nome: "Vitamina de Banana com Aveia",
-        ingredientes: ["1 banana madura", "2 colheres de sopa de aveia", "200ml de leite (pode ser vegetal)", "1 colher de chá de mel (opcional)"],
-        preparo: "1. Descasque a banana e corte em pedaços.\n2. Coloque todos os ingredientes no liquidificador.\n3. Bata em velocidade alta por 1-2 minutos até ficar cremoso.\n4. Se preferir mais gelado, adicione cubos de gelo antes de bater.\n5. Sirva imediatamente em um copo alto.",
-        calorias: 210,
-        tempo: "5 minutos",
-        porcoes: "1 porção",
-        dificuldade: "Fácil",
-        gordura: "3g",
-        proteinas: "8g",
-        carboidratos: "42g",
-        dicas: "Para uma versão vegana, substitua o leite por leite de amêndoa e o mel por xarope de agave. Adicione uma colher de chia para aumentar o teor de fibras."
-    },
-    {
-        nome: "Omelete de Espinafre (Vegetariano)",
-        ingredientes: ["2 ovos", "1 xícara de espinafre fresco", "1/4 de xícara de tomate picado", "2 colheres de sopa de queijo ralado", "Sal e pimenta a gosto", "1 colher de chá de azeite"],
-        preparo: "1. Em uma tigela, bata os ovos com sal e pimenta.\n2. Aqueça o azeite em uma frigideira antiaderente em fogo médio.\n3. Adicione o espinafre e o tomate, refogue por 1-2 minutos até murchar.\n4. Despeje os ovos batidos sobre os vegetais.\n5. Espalhe o queijo ralado uniformemente.\n6. Cozinhe por 3-4 minutos até a base dourar.\n7. Com uma espátula, dobre a omelete ao meio.\n8. Cozinhe por mais 1 minuto e sirva quente.",
-        calorias: 180,
+        nome: "Omelete de Espinafre",
+        ingredientes: ["2 ovos", "1 xícara de espinafre fresco", "2 colheres de queijo cottage", "Sal e pimenta", "1 colher de chá de azeite"],
+        preparo: "1. Bata os ovos em uma tigela.\n2. Aqueça o azeite em frigideira antiaderente.\n3. Adicione espinafre e refogue por 1 minuto.\n4. Despeje os ovos e espalhe uniformemente.\n5. Quando começar a firmar, adicione o queijo cottage.\n6. Dobre a omelete ao meio e sirva.",
         tempo: "10 minutos",
-        porcoes: "1 porção",
-        dificuldade: "Fácil",
-        gordura: "12g",
-        proteinas: "14g",
-        carboidratos: "4g",
-        dicas: "Para uma omelete mais fofa, adicione uma colher de água aos ovos batidos. Você pode substituir o espinafre por outras folhas como rúcula ou couve."
+        beneficio: "Rico em proteínas e baixo carboidrato"
     },
     {
-        nome: "Tofu Scramble (Vegano)",
-        ingredientes: ["200g de tofu firme escorrido", "1/2 pimentão vermelho picado", "1/2 cebola roxa picada", "1 colher de chá de cúrcuma", "1 colher de sopa de levedura nutricional", "Sal e pimenta a gosto", "1 colher de sopa de azeite"],
-        preparo: "1. Amasse o tofu com um garfo até obter uma textura de ovos mexidos.\n2. Aqueça o azeite em frigideira e refogue a cebola por 2 minutos.\n3. Adicione o pimentão e cozinhe por mais 3 minutos.\n4. Incorpore o tofu, cúrcuma, sal e pimenta.\n5. Cozinhe por 5-7 minutos mexendo ocasionalmente.\n6. Finalize com levedura nutricional e sirva com torradas integrais.",
-        calorias: 220,
+        nome: "Mingau de Aveia",
+        ingredientes: ["1/2 xícara de aveia em flocos", "1 xícara de leite desnatado", "1 banana amassada", "1 colher de chá de canela", "1 colher de sopa de sementes de chia"],
+        preparo: "1. Misture todos os ingredientes em uma panela.\n2. Leve ao fogo médio, mexendo sempre.\n3. Cozinhe por 5-7 minutos até engrossar.\n4. Sirva quente com frutas frescas.",
+        tempo: "10 minutos",
+        beneficio: "Rico em fibras e energia sustentável"
+    },
+    {
+        nome: "Iogurte com Frutas e Granola",
+        ingredientes: ["1 pote de iogurte grego natural", "1/2 xícara de frutas picadas (morango, mirtilo)", "2 colheres de granola caseira", "1 colher de chá de mel"],
+        preparo: "1. Coloque o iogurte no fundo de uma tigela.\n2. Adicione as frutas picadas.\n3. Polvilhe a granola por cima.\n4. Regue com mel e sirva imediatamente.",
+        tempo: "5 minutos",
+        beneficio: "Rico em proteínas e probióticos"
+    },
+    {
+        nome: "Vitamina de Banana e Amendoim",
+        ingredientes: ["1 banana congelada", "1 colher de sopa de pasta de amendoim", "200ml de leite desnatado", "1 colher de chá de cacau em pó"],
+        preparo: "1. Coloque todos os ingredientes no liquidificador.\n2. Bata até obter uma textura cremosa.\n3. Se necessário, adicione um pouco de água.\n4. Sirva imediatamente.",
+        tempo: "5 minutos",
+        beneficio: "Fonte de energia e gorduras saudáveis"
+    },
+    {
+        nome: "Tapioca de Queijo Branco",
+        ingredientes: ["3 colheres de goma de tapioca", "2 colheres de queijo minas light", "1 pitada de orégano", "1 colher de chá de azeite"],
+        preparo: "1. Peneire a tapioca em frigideira quente.\n2. Cozinhe por 1 minuto de cada lado.\n3. Adicione o queijo e o orégano.\n4. Dobre ao meio e sirva quente.",
+        tempo: "8 minutos",
+        beneficio: "Sem glúten e baixo teor de gordura"
+    },
+    {
+        nome: "Panqueca de Banana e Aveia",
+        ingredientes: ["1 banana madura", "2 colheres de aveia", "1 ovo", "1 colher de chá de fermento", "1 pitada de canela"],
+        preparo: "1. Amasse a banana em uma tigela.\n2. Adicione os demais ingredientes e misture bem.\n3. Despeje pequenas porções em frigideira antiaderente.\n4. Cozinhe por 2 minutos de cada lado.\n5. Sirva com frutas frescas.",
         tempo: "15 minutos",
-        porcoes: "2 porções",
-        dificuldade: "Fácil",
-        gordura: "15g",
-        proteinas: "16g",
-        carboidratos: "8g",
-        dicas: "Para um sabor extra, adicione cogumelos picados ou espinafre. Sirva com abacate fatiado para gorduras saudáveis."
+        beneficio: "Sem açúcar e rico em fibras"
     },
     {
-        nome: "Panquecas de Aveia e Banana",
-        ingredientes: ["1 banana madura", "2 ovos", "1/2 xícara de aveia em flocos", "1 colher de chá de canela", "1 colher de chá de fermento", "1 pitada de sal", "Óleo de coco para untar"],
-        preparo: "1. Amasse a banana em uma tigela.\n2. Adicione os ovos e misture bem.\n3. Incorpore a aveia, canela, fermento e sal.\n4. Aqueça uma frigideira antiaderente com um pouco de óleo.\n5. Despeje porções da massa e cozinhe por 2-3 minutos de cada lado.\n6. Sirva com frutas frescas e mel.",
-        calorias: 320,
-        tempo: "20 minutos",
-        porcoes: "2 porções",
-        dificuldade: "Fácil",
-        gordura: "10g",
-        proteinas: "12g",
-        carboidratos: "45g",
-        dicas: "Para versão vegana, substitua os ovos por 2 colheres de chia hidratadas em 6 colheres de água. Adicione gotas de baunilha para aroma."
-    },
-    {
-        nome: "Pudim de Chia com Frutas",
-        ingredientes: ["3 colheres de sopa de sementes de chia", "1 xícara de leite vegetal", "1 colher de sopa de mel", "1/2 xícara de frutas vermelhas frescas", "1 colher de chá de essência de baunilha"],
-        preparo: "1. Em um pote, misture chia, leite vegetal, mel e baunilha.\n2. Mexa bem e deixe na geladeira por 4 horas ou durante a noite.\n3. Antes de servir, misture novamente e cubra com frutas.\n4. Adicione granola caseira para crocância.",
-        calorias: 180,
-        tempo: "5 minutos (mais tempo de geladeira)",
-        porcoes: "1 porção",
-        dificuldade: "Fácil",
-        gordura: "8g",
-        proteinas: "6g",
-        carboidratos: "22g",
-        dicas: "Para variedade, experimente diferentes leites vegetais e frutas da estação. Adicione raspas de limão para frescor."
-    },
-    {
-        nome: "Torrada Integral com Abacate",
-        ingredientes: ["2 fatias de pão integral", "1/2 abacate maduro", "Suco de 1/2 limão", "Pimenta do reino moída", "Sal marinho", "Sementes de gergelim"],
-        preparo: "1. Toque o pão até ficar crocante.\n2. Amasse o abacate com garfo e misture com suco de limão.\n3. Espalhe sobre as torradas.\n4. Tempere com sal, pimenta e sementes de gergelim.\n5. Decore com microgreens ou rúcula.",
-        calorias: 250,
+        nome: "Ovos Mexidos com Tomate",
+        ingredientes: ["2 ovos", "1 tomate picado", "1/4 de cebola picada", "Salsinha fresca", "Sal e pimenta"],
+        preparo: "1. Bata os ovos em uma tigela.\n2. Refogue a cebola em frigideira antiaderente.\n3. Adicione o tomate e cozinhe por 1 minuto.\n4. Despeje os ovos e mexa até cozinhar.\n5. Tempere com sal, pimenta e salsinha.",
         tempo: "10 minutos",
-        porcoes: "1 porção",
-        dificuldade: "Fácil",
-        gordura: "15g",
-        proteinas: "7g",
-        carboidratos: "25g",
-        dicas: "Para proteína extra, adicione ovo pochê ou fatias de tofu grelhado. Use pimenta caiena para um toque picante."
+        beneficio: "Proteína de alta qualidade"
     },
     {
-        nome: "Iogurte Grego com Granola e Frutas",
-        ingredientes: ["1 pote de iogurte grego natural", "1/2 xícara de granola caseira", "1/2 xícara de frutas picadas (manga, morango, kiwi)", "1 colher de sopa de mel", "1 colher de sopa de castanhas picadas"],
-        preparo: "1. Em uma taça, coloque o iogurte no fundo.\n2. Adicione uma camada de granola.\n3. Coloque as frutas por cima.\n4. Regue com mel e finalize com castanhas.\n5. Sirva imediatamente.",
-        calorias: 280,
+        nome: "Pão Integral com Abacate",
+        ingredientes: ["2 fatias de pão integral", "1/2 abacate", "Suco de 1/2 limão", "Pimenta do reino", "Sementes de gergelim"],
+        preparo: "1. Toque o pão até ficar crocante.\n2. Amasse o abacate com suco de limão.\n3. Espalhe sobre as torradas.\n4. Tempere com pimenta e sementes de gergelim.",
+        tempo: "7 minutos",
+        beneficio: "Gorduras saudáveis e fibras"
+    },
+    {
+        nome: "Smoothie Verde",
+        ingredientes: ["1 xícara de espinafre fresco", "1/2 maçã verde", "1/2 pepino", "Suco de 1 limão", "200ml de água de coco"],
+        preparo: "1. Lave bem todos os ingredientes.\n2. Pique a maçã e o pepino.\n3. Coloque tudo no liquidificador e bata até ficar homogêneo.\n4. Sirva gelado.",
+        tempo: "8 minutos",
+        beneficio: "Desintoxicante e rico em nutrientes"
+    },
+    {
+        nome: "Crepioca de Frango",
+        ingredientes: ["2 colheres de goma de tapioca", "1 ovo", "1/4 de xícara de frango desfiado", "Orégano", "Sal"],
+        preparo: "1. Misture a tapioca e o ovo.\n2. Despeje em frigideira quente e espalhe.\n3. Cozinhe por 1 minuto de cada lado.\n4. Recheie com frango desfiado e orégano.\n5. Dobre e sirva.",
+        tempo: "12 minutos",
+        beneficio: "Alta proteína e baixo carboidrato"
+    },
+    {
+        nome: "Overnight Oats",
+        ingredientes: ["1/2 xícara de aveia", "1/2 xícara de leite desnatado", "1 colher de chia", "1 colher de mel", "Frutas frescas"],
+        preparo: "1. Misture todos os ingredientes em um pote.\n2. Tampe e leve à geladeira durante a noite.\n3. No dia seguinte, adicione frutas frescas.\n4. Misture bem e sirva.",
+        tempo: "5 minutos (preparo noturno)",
+        beneficio: "Prático e rico em fibras"
+    },
+    {
+        nome: "Waffle Integral",
+        ingredientes: ["1 xícara de farinha integral", "1 ovo", "3/4 xícara de leite desnatado", "1 colher de chá de fermento", "1 colher de chá de essência de baunilha"],
+        preparo: "1. Misture todos os ingredientes.\n2. Aqueça a waffleira e unte levemente.\n3. Despeje porções de massa e cozinhe até dourar.\n4. Sirva com frutas frescas.",
+        tempo: "20 minutos",
+        beneficio: "Integral e sem açúcar adicionado"
+    },
+    {
+        nome: "Omelete de Micro-ondas",
+        ingredientes: ["2 ovos", "2 colheres de queijo ralado", "1 colher de requeijão light", "Tomate cereja picado", "Orégano"],
+        preparo: "1. Bata os ovos em uma tigela própria para micro-ondas.\n2. Adicione os demais ingredientes e misture.\n3. Leve ao micro-ondas por 2 minutos em potência alta.\n4. Espere 1 minuto antes de servir.",
         tempo: "5 minutos",
-        porcoes: "1 porção",
-        dificuldade: "Fácil",
-        gordura: "10g",
-        proteinas: "15g",
-        carboidratos: "35g",
-        dicas: "Para versão vegana, substitua iogurte grego por iogurte de coco. Faça sua própria granola com aveia, nozes e mel."
+        beneficio: "Super rápido e proteico"
     },
     {
-        nome: "Crepioca de Queijo Branco",
-        ingredientes: ["2 colheres de sopa de tapioca", "1 ovo", "2 colheres de sopa de queijo minas frescal picado", "Sal a gosto", "Orégano", "1 colher de chá de azeite"],
-        preparo: "1. Misture todos os ingredientes até formar uma massa homogênea.\n2. Aqueça uma frigideira antiaderente com azeite.\n3. Despeje a massa e espalhe uniformemente.\n4. Cozinhe por 2 minutos de cada lado.\n5. Sirva com tomate cereja e manjericão.",
-        calorias: 210,
+        nome: "Sanduíche Natural de Frango",
+        ingredientes: ["2 fatias de pão integral", "1/4 de peito de frango grelhado", "1 folha de alface", "2 rodelas de tomate", "1 colher de mostarda"],
+        preparo: "1. Toque o pão levemente.\n2. Espalhe a mostarda em uma fatia.\n3. Arrume o frango desfiado, alface e tomate.\n4. Feche o sanduíche e corte ao meio.",
         tempo: "10 minutos",
-        porcoes: "1 porção",
-        dificuldade: "Fácil",
-        gordura: "11g",
-        proteinas: "12g",
-        carboidratos: "18g",
-        dicas: "Adicione espinafre picado para mais nutrientes. Substitua queijo por tofu para versão vegana."
+        beneficio: "Proteína magra e saciante"
     },
     {
-        nome: "Smoothie Bowl Tropical",
-        ingredientes: ["1 banana congelada", "1/2 xícara de manga congelada", "1/4 de abacate", "1/2 xícara de leite de coco", "Coberturas: kiwi, morango, coco ralado, sementes de chia"],
-        preparo: "1. Bata todos os ingredientes no liquidificador até cremoso.\n2. Despeje em uma tigela.\n3. Decore generosamente com as coberturas.\n4. Sirva imediatamente com colher.",
-        calorias: 320,
-        tempo: "10 minutos",
-        porcoes: "1 porção",
-        dificuldade: "Fácil",
-        gordura: "14g",
-        proteinas: "5g",
-        carboidratos: "48g",
-        dicas: "Congele frutas maduras para textura perfeita. Adicione proteína em pó vegetal para refeição completa."
-    },
+        nome: "Mingau de Chia",
+        ingredientes: ["3 colheres de sementes de chia", "1 xícara de leite vegetal", "1 colher de mel", "1/2 colher de chá de canela", "Frutas vermelhas"],
+        preparo: "1. Misture a chia com o leite vegetal.\n2. Adicione mel e canela.\n3. Deixe na geladeira por 15 minutos.\n4. Misture novamente e sirva com frutas.",
+        tempo: "5 minutos (mais 15 de geladeira)",
+        beneficio: "Rico em ômega-3 e fibras"
+    }
+];
+
+// Array de receitas para almoço (15 receitas)
+const receitasAlmoco = [
     {
-        nome: "Overnight Oats com Maçã e Canela",
-        ingredientes: ["1/2 xícara de aveia em flocos", "1/2 xícara de leite vegetal", "1/4 de maçã picada", "1 colher de sopa de mel", "1 colher de chá de canela", "1 colher de sopa de nozes picadas"],
-        preparo: "1. Em um pote, misture aveia, leite, mel e canela.\n2. Tampe e leve à geladeira durante a noite.\n3. No dia seguinte, adicione maçã picada e nozes.\n4. Misture bem antes de servir.",
-        calorias: 290,
-        tempo: "5 minutos (mais tempo de geladeira)",
-        porcoes: "1 porção",
-        dificuldade: "Fácil",
-        gordura: "8g",
-        proteinas: "7g",
-        carboidratos: "50g",
-        dicas: "Para variedade, experimente pera assada ou banana. Adicione linhaça moída para ômega-3."
-    },
-    {
-        nome: "Waffles Integrais",
-        ingredientes: ["1 xícara de farinha integral", "1 ovo", "3/4 xícara de leite", "1 colher de sopa de óleo de coco", "1 colher de chá de fermento", "1 pitada de sal", "1 colher de chá de essência de baunilha"],
-        preparo: "1. Misture todos os ingredientes até formar massa homogênea.\n2. Aqueça a waffleira e unte levemente.\n3. Despeje porções de massa e feche.\n4. Cozinhe por 3-5 minutos até dourar.\n5. Sirva com frutas frescas.",
-        calorias: 280,
-        tempo: "20 minutos",
-        porcoes: "2 waffles",
-        dificuldade: "Médio",
-        gordura: "9g",
-        proteinas: "8g",
-        carboidratos: "42g",
-        dicas: "Congele waffles extras para dias corridos. Substitua 1/4 da farinha por farelo de aveia para mais fibras."
-    },
-    {
-        nome: "Ovos Benedict Light",
-        ingredientes: ["2 ovos", "1 muffin integral", "2 fatias de peito de peru defumado", "1/4 de abacate", "Salsinha picada", "Molho: 1 iogurte grego, suco de limão, mostarda dijon"],
-        preparo: "1. Prepare ovos pochê em água com vinagre.\n2. Toque o muffin e cubra com peru e abacate.\n3. Coloque os ovos por cima.\n4. Misture ingredientes do molho e regue.\n5. Finalize com salsinha.",
-        calorias: 320,
+        nome: "Frango Grelhado com Legumes",
+        ingredientes: ["1 peito de frango", "1 abobrinha", "1 cenoura", "1 pimentão", "Azeite", "Ervas finas", "Sal e pimenta"],
+        preparo: "1. Corte o frango em tiras e tempere.\n2. Corte os legumes em palitos.\n3. Grelhe o frango em frigideira antiaderente.\n4. Refogue os legumes com um fio de azeite.\n5. Sirva o frango sobre os legumes.",
         tempo: "25 minutos",
-        porcoes: "1 porção",
-        dificuldade: "Médio",
-        gordura: "18g",
-        proteinas: "22g",
-        carboidratos: "20g",
-        dicas: "Para versão vegana, substitua ovos por tofu marinado e peru por cogumelos grelhados."
+        beneficio: "Proteína magra e baixo carboidrato"
+    },
+    {
+        nome: "Salada de Quinoa e Grão-de-Bico",
+        ingredientes: ["1 xícara de quinoa cozida", "1/2 xícara de grão-de-bico cozido", "Tomate cereja", "Pepino", "Salsinha", "Azeite e limão"],
+        preparo: "1. Misture todos os ingredientes em uma tigela grande.\n2. Tempere com azeite, limão, sal e pimenta.\n3. Deixe na geladeira por 15 minutos antes de servir.",
+        tempo: "20 minutos",
+        beneficio: "Proteína vegetal completa"
+    },
+    {
+        nome: "Filé de Peixe ao Forno",
+        ingredientes: ["2 filés de pescada", "Suco de 1 limão", "1 colher de azeite", "Alho picado", "Tomilho", "Sal e pimenta"],
+        preparo: "1. Tempere o peixe com todos os ingredientes.\n2. Coloque em assadeira forrada com papel manteiga.\n3. Asse a 200°C por 15-20 minutos.\n4. Sirva com legumes cozidos no vapor.",
+        tempo: "30 minutos",
+        beneficio: "Ômega-3 e baixo teor calórico"
+    },
+    {
+        nome: "Arroz Integral com Brócolis",
+        ingredientes: ["1 xícara de arroz integral", "2 xícaras de água", "1 brócolis", "1 dente de alho", "1 colher de azeite", "Sal"],
+        preparo: "1. Cozinhe o arroz integral conforme instruções.\n2. Separe os floretes de brócolis.\n3. Refogue o alho no azeite.\n4. Adicione o brócolis e cozinhe por 5 minutos.\n5. Misture com o arroz cozido e sirva.",
+        tempo: "40 minutos",
+        beneficio: "Fibras e nutrientes essenciais"
+    },
+    {
+        nome: "Strogonoff de Frango Light",
+        ingredientes: ["400g de peito de frango", "1 cebola", "2 dentes de alho", "1 colher de mostarda", "1 colher de ketchup", "1 pote de iogurte natural", "Cogumelos"],
+        preparo: "1. Corte o frango em cubos e tempere.\n2. Refogue a cebola e alho no azeite.\n3. Adicione o frango e doure.\n4. Acrescente os cogumelos e molhos.\n5. Por último, adicione o iogurte e aqueça sem ferver.\n6. Sirva com arroz integral.",
+        tempo: "35 minutos",
+        beneficio: "Versão saudável do clássico"
+    },
+    {
+        nome: "Moqueca de Peixe Light",
+        ingredientes: ["2 postas de peixe branco", "1 cebola", "1 pimentão", "2 tomates", "Leite de coco light", "Coentro", "Azeite de dendê"],
+        preparo: "1. Arrume camadas de cebola, pimentão e tomate em panela.\n2. Coloque o peixe por cima.\n3. Adicione o leite de coco e um fio de dendê.\n4. Cozinhe em fogo baixo por 20 minutos.\n5. Finalize com coentro.",
+        tempo: "40 minutos",
+        beneficio: "Saboroso e rico em proteínas"
+    },
+    {
+        nome: "Espaguete de Abobrinha",
+        ingredientes: ["2 abobrinhas", "1 xícara de molho de tomate caseiro", "Alho picado", "Manjericão fresco", "Queijo parmesão ralado"],
+        preparo: "1. Corte as abobrinhas em tiras finas com um descascador.\n2. Refogue o alho no azeite.\n3. Adicione as tiras de abobrinha e cozinhe por 3 minutos.\n4. Misture o molho de tomate e aqueça.\n5. Finalize com manjericão e queijo.",
+        tempo: "20 minutos",
+        beneficio: "Baixo carboidrato e leve"
+    },
+    {
+        nome: "Frango Xadrez",
+        ingredientes: ["400g de peito de frango", "1 pimentão amarelo", "1 pimentão vermelho", "1 cebola", "Broto de bambu", "Molho shoyu light", "Gengibre"],
+        preparo: "1. Corte o frango e os vegetais em cubos.\n2. Refogue o frango em wok com pouco óleo.\n3. Adicione os vegetais e refogue rapidamente.\n4. Tempere com shoyu e gengibre ralado.\n5. Sirva com arroz integral.",
+        tempo: "30 minutos",
+        beneficio: "Preparo rápido e nutritivo"
+    },
+    {
+        nome: "Omelete de Forno",
+        ingredientes: ["4 ovos", "1/2 xícara de leite desnatado", "Tomate picado", "Cebola picada", "Queijo minas light", "Orégano"],
+        preparo: "1. Bata os ovos com o leite.\n2. Adicione os vegetais picados.\n3. Despeje em refratário untado.\n4. Asse a 180°C por 20 minutos.\n5. Corte em quadrados e sirva.",
+        tempo: "30 minutos",
+        beneficio: "Alta proteína e versátil"
+    },
+    {
+        nome: "Salada de Atum",
+        ingredientes: ["1 lata de atum light", "Alface crespa", "Tomate", "Pepino", "Milho", "Azeitonas", "Limão e azeite"],
+        preparo: "1. Lave e pique as folhas e vegetais.\n2. Misture todos os ingredientes em uma tigela.\n3. Tempere com limão, azeite, sal e pimenta.\n4. Adicione o atum escorrido por último.",
+        tempo: "15 minutos",
+        beneficio: "Rápido e rico em ômega-3"
+    },
+    {
+        nome: "Wrap de Folhas",
+        ingredientes: ["Folhas de alface americana", "Peito de frango grelhado", "Cenoura ralada", "Pepino em tiras", "Abacate", "Iogurte natural"],
+        preparo: "1. Lave e seque as folhas de alface.\n2. Arrume o frango desfiado e os vegetais.\n3. Adicione fatias de abacate.\n4. Regue com iogurte natural.\n5. Enrole como um wrap e sirva.",
+        tempo: "20 minutos",
+        beneficio: "Sem carboidratos e refrescante"
+    },
+    {
+        nome: "Frango ao Curry",
+        ingredientes: ["400g de peito de frango", "1 cebola", "1 colher de curry em pó", "1 lata de tomate pelado", "Leite de coco light", "Coentro"],
+        preparo: "1. Doure o frango em cubos e reserve.\n2. Refogue a cebola e adicione o curry.\n3. Volte o frango e acrescente o tomate.\n4. Cozinhe por 15 minutos.\n5. Adicione leite de coco e coentro.",
+        tempo: "35 minutos",
+        beneficio: "Sabor marcante e proteico"
+    },
+    {
+        nome: "Berinjela Assada",
+        ingredientes: ["1 berinjela grande", "Molho de tomate", "Queijo minas light", "Manjericão", "Azeite"],
+        preparo: "1. Corte a berinjela em rodelas grossas.\n2. Arrume em assadeira, cubra com molho.\n3. Adicione pedaços de queijo e manjericão.\n4. Regue com azeite e asse a 200°C por 25 minutos.",
+        tempo: "40 minutos",
+        beneficio: "Vegetariano e nutritivo"
+    },
+    {
+        nome: "Peixe Grelhado com Salada",
+        ingredientes: ["2 filés de peixe branco", "Mix de folhas verdes", "Tomate", "Pepino", "Azeitonas", "Limão e azeite"],
+        preparo: "1. Tempere o peixe com limão e ervas.\n2. Grelhe por 4 minutos de cada lado.\n3. Prepare a salada com os vegetais.\n4. Regue a salada com limão e azeite.\n5. Sirva o peixe sobre a salada.",
+        tempo: "25 minutos",
+        beneficio: "Leve e rico em proteínas"
+    },
+    {
+        nome: "Frango com Batata Doce",
+        ingredientes: ["2 sobrecoxas de frango", "2 batatas doces", "Alecrim", "Alho", "Azeite", "Sal e pimenta"],
+        preparo: "1. Tempere o frango com alho, alecrim, sal e pimenta.\n2. Corte as batatas em cubos.\n3. Arrume em assadeira com o frango.\n4. Regue com azeite e asse a 200°C por 40 minutos.\n5. Vire na metade do tempo.",
+        tempo: "50 minutos",
+        beneficio: "Equilíbrio proteína-carboidrato"
+    }
+];
+
+// Array de receitas para lanche da tarde (15 receitas)
+const receitasTarde = [
+    {
+        nome: "Mix de Castanhas",
+        ingredientes: ["1 punhado de castanha de caju", "1 punhado de amêndoas", "1 punhado de nozes", "1 colher de uvas passas"],
+        preparo: "1. Misture todos os ingredientes em um potinho.\n2. Consuma uma porção (cerca de 30g) como lanche.",
+        tempo: "2 minutos",
+        beneficio: "Gorduras saudáveis e energia"
+    },
+    {
+        nome: "Frutas com Pasta de Amendoim",
+        ingredientes: ["1 maçã ou banana", "1 colher de pasta de amendoim integral"],
+        preparo: "1. Corte a fruta em pedaços.\n2. Mergulhe os pedaços na pasta de amendoim.\n3. Consuma imediatamente.",
+        tempo: "5 minutos",
+        beneficio: "Combinação saciante"
+    },
+    {
+        nome: "Iogurte com Sementes",
+        ingredientes: ["1 pote de iogurte natural", "1 colher de sementes de chia", "1 colher de sementes de linhaça"],
+        preparo: "1. Coloque o iogurte em uma tigela.\n2. Adicione as sementes e misture bem.\n3. Deixe descansar por 5 minutos antes de consumir.",
+        tempo: "7 minutos",
+        beneficio: "Probióticos e ômega-3"
     },
     {
         nome: "Bolo de Caneca Proteico",
-        ingredientes: ["1 ovo", "2 colheres de aveia", "1 colher de proteína em pó sabor baunilha", "1/2 banana amassada", "1 colher de chá de fermento", "1 colher de chá de canela", "Gotas de chocolate 70%"],
-        preparo: "1. Misture todos os ingredientes em uma caneca grande.\n2. Micro-ondas por 2 minutos em potência alta.\n3. Espere esfriar por 1 minuto.\n4. Decore com frutas ou iogurte.",
-        calorias: 250,
+        ingredientes: ["1 ovo", "2 colheres de aveia", "1 colher de proteína em pó", "1 colher de cacau", "1/2 colher de fermento"],
+        preparo: "1. Misture todos os ingredientes em uma caneca.\n2. Leve ao micro-ondas por 2 minutos.\n3. Espere esfriar por 1 minuto e consuma.",
         tempo: "5 minutos",
-        porcoes: "1 porção",
-        dificuldade: "Fácil",
-        gordura: "8g",
-        proteinas: "20g",
-        carboidratos: "25g",
-        dicas: "Adicione nozes picadas para crocância. Substitua ovo por 1 colher de chia hidratada para versão vegana."
+        beneficio: "Alto teor proteico"
     },
     {
-        nome: "Sanduíche de Ricota com Tomate Seco",
-        ingredientes: ["2 fatias de pão integral", "3 colheres de ricota fresca", "1 colher de tomate seco picado", "Folhas de manjericão", "Pimenta preta", "1 colher de azeite"],
-        preparo: "1. Misture ricota, tomate seco e manjericão.\n2. Tempere com pimenta e azeite.\n3. Espalhe sobre uma fatia de pão.\n4. Cubra com a outra fatia e corte diagonalmente.\n5. Sirva com mix de folhas verdes.",
-        calorias: 280,
-        tempo: "10 minutos",
-        porcoes: "1 porção",
-        dificuldade: "Fácil",
-        gordura: "12g",
-        proteinas: "14g",
-        carboidratos: "30g",
-        dicas: "Adicione rúcula ou espinafre cru para mais nutrientes. Use pão de centeio para sabor diferenciado."
+        nome: "Ovos Cozidos",
+        ingredientes: ["2 ovos"],
+        preparo: "1. Coloque os ovos em uma panela com água fria.\n2. Leve ao fogo até ferver.\n3. Conte 8 minutos após começar a ferver.\n4. Desligue, escorra e coloque em água fria.\n5. Descascue e consuma com sal e pimenta.",
+        tempo: "15 minutos",
+        beneficio: "Proteína completa e prática"
     },
     {
-        nome: "Shakshuka Vegetariana",
-        ingredientes: ["2 ovos", "1 lata de tomates pelados", "1/2 pimentão vermelho picado", "1/2 cebola picada", "1 dente de alho picado", "1 colher de chá de cominho", "Páprica defumada", "Coentro fresco", "Azeite"],
-        preparo: "1. Refogue cebola, alho e pimentão em azeite.\n2. Adicione tomates, cominho e páprica. Cozinhe por 10 min.\n3. Abra espaços na panela e quebre os ovos.\n4. Tampe e cozinhe até ovos atingirem ponto desejado.\n5. Finalize com coentro e sirva com pão integral.",
-        calorias: 300,
+        nome: "Cookie de Aveia",
+        ingredientes: ["1 banana amassada", "1/2 xícara de aveia", "1 colher de pasta de amendoim", "1 colher de uvas passas", "Canela"],
+        preparo: "1. Misture todos os ingredientes.\n2. Forme pequenos cookies em assadeira.\n3. Asse a 180°C por 15 minutos.\n4. Deixe esfriar antes de consumir.",
         tempo: "25 minutos",
-        porcoes: "2 porções",
-        dificuldade: "Médio",
-        gordura: "18g",
-        proteinas: "14g",
-        carboidratos: "20g",
-        dicas: "Adicione espinafre ou couve nos últimos minutos. Para versão vegana, substitua ovos por cubos de tofu."
+        beneficio: "Sem açúcar e rico em fibras"
+    },
+    {
+        nome: "Palitinhos de Legumes com Homus",
+        ingredientes: ["Cenoura", "Pepino", "Aipo", "1/2 xícara de homus caseiro"],
+        preparo: "1. Corte os legumes em palitos.\n2. Prepare o homus (ou use pronto).\n3. Mergulhe os palitos no homus e consuma.",
+        tempo: "10 minutos",
+        beneficio: "Fibras e proteína vegetal"
+    },
+    {
+        nome: "Smoothie de Morango",
+        ingredientes: ["1 xícara de morangos congelados", "1/2 banana", "200ml de leite desnatado", "1 colher de chia"],
+        preparo: "1. Coloque todos os ingredientes no liquidificador.\n2. Bata até obter consistência cremosa.\n3. Sirva imediatamente.",
+        tempo: "5 minutos",
+        beneficio: "Antioxidantes e refrescante"
+    },
+    {
+        nome: "Torrada com Ricota",
+        ingredientes: ["1 fatia de pão integral", "2 colheres de ricota", "Tomilho", "Pimenta do reino"],
+        preparo: "1. Toque o pão.\n2. Espalhe a ricota sobre o pão.\n3. Tempere com tomilho e pimenta.\n4. Consuma imediatamente.",
+        tempo: "5 minutos",
+        beneficio: "Proteína e baixa caloria"
+    },
+    {
+        nome: "Banana Assada com Canela",
+        ingredientes: ["1 banana nanica", "1 colher de chá de canela", "1 colher de chá de mel"],
+        preparo: "1. Coloque a banana com casca em assadeira.\n2. Asse a 180°C por 15 minutos.\n3. Retire, corte ao meio no sentido longitudinal.\n4. Polvilhe canela e regue com mel.",
+        tempo: "20 minutos",
+        beneficio: "Sobremesa saudável"
+    },
+    {
+        nome: "Pão de Queijo Light",
+        ingredientes: ["1 xícara de polvilho doce", "1/2 xícara de queijo minas light", "1 ovo", "1 colher de chá de fermento"],
+        preparo: "1. Misture todos os ingredientes.\n2. Faça bolinhas e coloque em forma.\n3. Asse a 200°C por 20 minutos.\n4. Espere esfriar um pouco antes de consumir.",
+        tempo: "30 minutos",
+        beneficio: "Versão light do clássico"
+    },
+    {
+        nome: "Vitamina de Abacate",
+        ingredientes: ["1/2 abacate", "200ml de leite desnatado", "Suco de 1/2 limão", "1 colher de mel"],
+        preparo: "1. Retire a polpa do abacate.\n2. Coloque todos os ingredientes no liquidificador.\n3. Bata até ficar cremoso.\n4. Sirva gelado.",
+        tempo: "7 minutos",
+        beneficio: "Gorduras saudáveis"
+    },
+    {
+        nome: "Sanduíche de Atum",
+        ingredientes: ["2 fatias de pão integral", "1 lata de atum light", "1 colher de maionese light", "Alface", "Tomate"],
+        preparo: "1. Misture o atum escorrido com a maionese.\n2. Espalhe sobre uma fatia de pão.\n3. Adicione alface e tomate.\n4. Feche o sanduíche e corte ao meio.",
+        tempo: "10 minutos",
+        beneficio: "Prático e rico em proteínas"
+    },
+    {
+        nome: "Barrinha de Cereal Caseira",
+        ingredientes: ["1 xícara de aveia", "1/2 xícara de amendoim", "1/4 de xícara de mel", "2 colheres de pasta de amendoim", "1 colher de chia"],
+        preparo: "1. Misture todos os ingredientes.\n2. Pressione em forma forrada com papel manteiga.\n3. Leve à geladeira por 2 horas.\n4. Corte em barras e armazene.",
+        tempo: "15 minutos (mais 2h geladeira)",
+        beneficio: "Sem conservantes"
+    },
+    {
+        nome: "Maçã com Canela",
+        ingredientes: ["1 maçã", "1 colher de chá de canela"],
+        preparo: "1. Lave bem a maçã.\n2. Corte em fatias ou cubos.\n3. Polvilhe com canela.\n4. Consuma imediatamente.",
+        tempo: "5 minutos",
+        beneficio: "Fibra e baixa caloria"
     }
 ];
 
-const receitasAlmoco = [
+// Array de receitas para jantar (15 receitas)
+const receitasNoite = [
     {
-        nome: "Arroz Integral com Legumes (Vegetariano)",
-        ingredientes: ["1 xícara de arroz integral", "2 xícaras de água", "1 cenoura média picada", "1/2 xícara de ervilhas frescas ou congeladas", "1/2 xícara de milho", "1 cebola picada", "2 dentes de alho picados", "1 colher de sopa de azeite", "Sal e pimenta a gosto", "Salsinha fresca para decorar"],
-        preparo: "1. Lave bem o arroz integral em água corrente.\n2. Em uma panela, aqueça o azeite e refogue a cebola e o alho até dourar.\n3. Adicione a cenoura e refogue por 2 minutos.\n4. Acrescente o arroz e mexa bem para envolver nos temperos.\n5. Adicione a água, sal e pimenta, e tampe a panela.\n6. Cozinhe em fogo baixo por 25-30 minutos.\n7. Quando faltar 10 minutos, adicione as ervilhas e o milho.\n8. Desligue o fogo e deixe descansar por 5 minutos.\n9. Sirva quente, decorado com salsinha picada.",
-        calorias: 300,
+        nome: "Sopa de Frango com Legumes",
+        ingredientes: ["1 peito de frango", "2 batatas", "1 cenoura", "1 chuchu", "Salsão", "Salsinha", "Sal e pimenta"],
+        preparo: "1. Cozinhe o frango em água com sal.\n2. Retire o frango e desfie.\n3. Adicione os legumes picados ao caldo.\n4. Cozinhe até os legumes ficarem macios.\n5. Volte o frango desfiado.\n6. Finalize com salsinha picada.",
         tempo: "40 minutos",
-        porcoes: "2 porções",
-        dificuldade: "Médio",
-        gordura: "4g",
-        proteinas: "8g",
-        carboidratos: "60g",
-        dicas: "Para uma versão mais proteica, adicione cubos de tofu ou frango desfiado. Se preferir legumes crocantes, adicione-os nos últimos 5 minutos de cozimento."
+        beneficio: "Leve e nutritiva"
     },
     {
-        nome: "Bowl de Quinoa com Abóbora Assada (Vegano)",
-        ingredientes: ["1 xícara de quinoa cozida", "200g de abóbora kabocha em cubos", "1 beterraba cozida picada", "1/2 abacate fatiado", "1 xícara de broto de feijão", "Molho: 2 colheres de tahine, suco de limão, água, alho em pó"],
-        preparo: "1. Asse abóbora com azeite e sal a 200°C por 25 min.\n2. Prepare quinoa conforme instruções da embalagem.\n3. Monte o bowl com quinoa, abóbora, beterraba, abacate e brotos.\n4. Misture ingredientes do molho e regue sobre o bowl.\n5. Finalize com sementes de girassol.",
-        calorias: 420,
-        tempo: "35 minutos",
-        porcoes: "2 porções",
-        dificuldade: "Fácil",
-        gordura: "18g",
-        proteinas: "12g",
-        carboidratos: "55g",
-        dicas: "Adicione grão-de-bico assado para mais proteína. Use diferentes vegetais assados conforme disponibilidade."
+        nome: "Salada de Frango Grelhado",
+        ingredientes: ["1 peito de frango grelhado", "Mix de folhas", "Tomate", "Pepino", "Milho", "Azeite e limão"],
+        preparo: "1. Corte o frango em tiras.\n2. Prepare a salada com as folhas e vegetais.\n3. Adicione o frango por cima.\n4. Tempere com azeite, limão, sal e pimenta.",
+        tempo: "20 minutos",
+        beneficio: "Proteína magra e leve"
+    },
+    {
+        nome: "Omelete de Vegetais",
+        ingredientes: ["2 ovos", "1/4 de pimentão", "1/4 de cebola", "2 cogumelos", "Orégano", "Azeite"],
+        preparo: "1. Pique os vegetais em cubinhos.\n2. Refogue rapidamente com azeite.\n3. Bata os ovos e despeje sobre os vegetais.\n4. Cozinhe até firmar e vire para dourar dos dois lados.\n5. Sirva com salada verde.",
+        tempo: "15 minutos",
+        beneficio: "Jantar rápido e proteico"
+    },
+    {
+        nome: "Filé de Frango com Salada",
+        ingredientes: ["1 filé de frango", "Alface", "Rúcula", "Tomate", "Pepino", "Vinagrete de limão"],
+        preparo: "1. Tempere o frango e grelhe.\n2. Prepare a salada com os vegetais.\n3. Corte o frango em fatias.\n4. Arrume sobre a salada e regue com vinagrete.",
+        tempo: "25 minutos",
+        beneficio: "Baixo carboidrato"
     },
     {
         nome: "Salmão Grelhado com Aspargos",
-        ingredientes: ["2 filés de salmão (150g cada)", "1 maço de aspargos verdes", "2 colheres de sopa de azeite", "Suco de 1 limão", "1 colher de chá de ervas finas", "Sal e pimenta", "Batatas baby assadas"],
-        preparo: "1. Tempere salmão com suco de limão, sal, pimenta e ervas.\n2. Grelhe em frigideira antiaderente 4-5 min cada lado.\n3. Refogue aspargos em azeite com alho por 5 min.\n4. Sirva com batatas baby assadas com alecrim.",
-        calorias: 450,
-        tempo: "25 minutos",
-        porcoes: "2 porções",
-        dificuldade: "Médio",
-        gordura: "25g",
-        proteinas: "35g",
-        carboidratos: "20g",
-        dicas: "Para crosta crocante, pressione salmão na frigideira. Substitua batatas por quinoa para refeição low-carb."
-    },
-    {
-        nome: "Lentilha com Vegetais",
-        ingredientes: ["1 xícara de lentilhas verdes", "2 xícaras de água", "1 cenoura picada", "1 talo de salsão picado", "1 tomate picado", "1 cebola picada", "2 dentes de alho", "1 folha de louro", "Cominho em pó", "Azeite"],
-        preparo: "1. Refogue cebola, alho e salsão em azeite.\n2. Adicione cenoura e tomate, cozinhe por 5 min.\n3. Acrescente lentilhas, água, louro e cominho.\n4. Cozinhe por 25-30 min até lentilhas macias.\n5. Ajuste temperos e sirva com arroz integral.",
-        calorias: 350,
-        tempo: "40 minutos",
-        porcoes: "3 porções",
-        dificuldade: "Fácil",
-        gordura: "5g",
-        proteinas: "18g",
-        carboidratos: "58g",
-        dicas: "Adicione espinafre nos últimos 5 minutos. Sirva com iogurte natural para cremosidade."
-    },
-    {
-        nome: "Frango ao Curry com Leite de Coco",
-        ingredientes: ["400g de peito de frango em cubos", "1 lata de leite de coco light", "1 cebola picada", "2 dentes de alho", "1 colher de sopa de curry em pó", "1 pimentão amarelo picado", "1 colher de sopa de gengibre ralado", "1 colher de sopa de óleo de coco", "Coentro fresco"],
-        preparo: "1. Doure frango no óleo de coco e reserve.\n2. Refogue cebola, alho, gengibre e pimentão.\n3. Adicione curry e frigue por 1 minuto.\n4. Volte frango à panela e adicione leite de coco.\n5. Cozinhe em fogo baixo por 15 minutos.\n6. Finalize com coentro e sirva com arroz basmati.",
-        calorias: 380,
-        tempo: "35 minutos",
-        porcoes: "3 porções",
-        dificuldade: "Médio",
-        gordura: "18g",
-        proteinas: "30g",
-        carboidratos: "20g",
-        dicas: "Adicione abobrinha ou berinjela para mais vegetais. Use curry tailandês para sabor diferente."
-    },
-    {
-        nome: "Risoto de Cogumelos (Vegetariano)",
-        ingredientes: ["1 xícara de arroz arbóreo", "300g de cogumelos mistos fatiados", "1 cebola pequena picada", "2 dentes de alho", "1/2 xícara de vinho branco seco", "4 xícaras de caldo de legumes", "2 colheres de sopa de manteiga", "1/4 de xícara de queijo parmesão ralado", "Salsinha picada"],
-        preparo: "1. Refogue cebola e alho em manteiga até transparentes.\n2. Adicione cogumelos e cozinhe até murchar.\n3. Incorpore arroz e mexa por 2 min.\n4. Adicione vinho e deixe evaporar.\n5. Adicione caldo quente aos poucos, mexendo sempre.\n6. Cozinhe por 18-20 min até arroz al dente.\n7. Desligue e misture parmesão e salsinha.",
-        calorias: 420,
-        tempo: "40 minutos",
-        porcoes: "3 porções",
-        dificuldade: "Médio",
-        gordura: "15g",
-        proteinas: "10g",
-        carboidratos: "60g",
-        dicas: "Para versão vegana, substitua manteiga por azeite e queijo por levedura nutricional."
-    },
-    {
-        nome: "Tacos de Camarão com Abacate",
-        ingredientes: ["300g de camarões médios limpos", "8 tortilhas de milho", "1 abacate amassado", "1 xícara de repolho roxo ralado", "1 manga em cubos", "Suco de 1 limão", "Coentro", "Pimenta caiena", "Azeite"],
-        preparo: "1. Tempere camarões com suco de limão, alho e pimenta.\n2. Grelhe camarões em frigideira quente por 2 min cada lado.\n3. Aqueça tortilhas conforme instruções.\n4. Monte tacos com abacate, repolho, manga e camarões.\n5. Finalize com coentro e molho picante.",
-        calorias: 380,
-        tempo: "25 minutos",
-        porcoes: "2 porções",
-        dificuldade: "Médio",
-        gordura: "15g",
-        proteinas: "25g",
-        carboidratos: "40g",
-        dicas: "Use tortilhas de couve para versão low-carb. Adicione feijão preto para mais proteína vegetal."
-    },
-    {
-        nome: "Stir-fry de Tofu com Vegetais",
-        ingredientes: ["300g de tofu firme em cubos", "2 colheres de sopa de molho de soja", "1 colher de sopa de mel", "1 pimentão vermelho em tiras", "1 cenoura em rodelas finas", "1 xícara de brócolis", "1 colher de chá de gengibre ralado", "2 dentes de alho", "1 colher de chá de óleo de gergelim", "Castanha de caju"],
-        preparo: "1. Marine tofu em metade do molho de soja por 15 min.\n2. Doure tofu em wok com óleo e reserve.\n3. Refogue alho e gengibre por 30 segundos.\n4. Adicione vegetais e refogue por 5 min.\n5. Volte tofu, adicione molho restante e mel.\n6. Cozinhe por mais 3 min e finalize com óleo de gergelim e cajus.",
-        calorias: 320,
-        tempo: "30 minutos",
-        porcoes: "2 porções",
-        dificuldade: "Médio",
-        gordura: "16g",
-        proteinas: "18g",
-        carboidratos: "25g",
-        dicas: "Adicione abóbora japonesa ou cogumelos shiitake. Sirve com arroz integral ou quinoa."
-    },
-    {
-        nome: "Moqueca de Palmito (Vegano)",
-        ingredientes: ["2 latas de palmito pupunha em rodelas", "1 cebola em rodelas", "1 pimentão vermelho em rodelas", "2 tomates sem sementes picados", "1 lata de leite de coco", "Suco de 1 limão", "Azeite de dendê", "Coentro", "Arroz integral"],
-        preparo: "1. Refogue cebola e pimentão em azeite por 5 min.\n2. Adicione tomate e cozinhe até desmanchar.\n3. Acrescente palmito, suco de limão e leite de coco.\n4. Cozinhe em fogo baixo por 15 min.\n5. Finalize com dendê e coentro.\n6. Sirva com arroz integral e farofa de aveia.",
-        calorias: 350,
-        tempo: "35 minutos",
-        porcoes: "3 porções",
-        dificuldade: "Médio",
-        gordura: "20g",
-        proteinas: "8g",
-        carboidratos: "40g",
-        dicas: "Adicione banana-da-terra cozida para sabor tradicional. Use cogumelos para textura carnuda."
-    },
-    {
-        nome: "Frango Assado com Batatas",
-        ingredientes: ["4 sobrecoxas de frango", "4 batatas médias em cubos", "2 cenouras em rodelas", "1 cebola em oito partes", "Raminhos de alecrim", "3 dentes de alho amassados", "Azeite", "Páprica defumada", "Sal e pimenta"],
-        preparo: "1. Tempere frango com alho, páprica, sal e pimenta.\n2. Em assadeira, misture vegetais com azeite e alecrim.\n3. Arrume frango sobre vegetais.\n4. Asse a 200°C por 45-50 min até dourado.\n5. Vire os pedaços na metade do tempo.",
-        calorias: 480,
-        tempo: "60 minutos",
-        porcoes: "4 porções",
-        dificuldade: "Fácil",
-        gordura: "22g",
-        proteinas: "35g",
-        carboidratos: "35g",
-        dicas: "Adicione batata-doce para mais nutrientes. Sirva com salada verde para refeição completa."
-    },
-    {
-        nome: "Cuscuz Marroquino com Legumes",
-        ingredientes: ["2 xícaras de cuscuz integral", "2 xícaras de caldo de legumes", "1 berinjela em cubos", "1 abobrinha em cubos", "1/2 xícara de passas", "Canela em pó", "Cominho", "Hortelã fresca", "Azeite"],
-        preparo: "1. Asse berinjela e abobrinha com azeite por 20 min.\n2. Hidrate cuscuz com caldo quente por 5 min.\n3. Solte os grãos com garfo.\n4. Misture legumes assados, passas e especiarias.\n5. Finalize com hortelã picada e azeite.",
-        calorias: 320,
-        tempo: "30 minutos",
-        porcoes: "4 porções",
-        dificuldade: "Fácil",
-        gordura: "8g",
-        proteinas: "9g",
-        carboidratos: "60g",
-        dicas: "Adicione grão-de-bico cozido para mais proteína. Sirva frio como salada ou quente como acompanhamento."
-    },
-    {
-        nome: "Bife Acebolado com Purê de Mandioquinha",
-        ingredientes: ["4 bifes de patinho (150g cada)", "2 cebolas grandes em rodelas", "1 kg de mandioquinha", "1/2 xícara de leite desnatado", "1 colher de sopa de manteiga", "Salsa picada", "Caldo de carne light", "Azeite"],
-        preparo: "1. Cozinhe mandioquinha até macia e faça purê com leite e manteiga.\n2. Tempere bifes e grelhe por 3 min cada lado.\n3. Refogue cebolas em azeite até caramelizar.\n4. Adicione caldo de carne e reduza.\n5. Sirve bifes com cebolas e purê, finalizado com salsa.",
-        calorias: 520,
-        tempo: "45 minutos",
-        porcoes: "4 porções",
-        dificuldade: "Médio",
-        gordura: "22g",
-        proteinas: "40g",
-        carboidratos: "40g",
-        dicas: "Use cogumelos portobello para versão vegetariana. Adicione noz-moscada ao purê para sabor extra."
-    },
-    {
-        nome: "Salada de Grão-de-Bico com Atum",
-        ingredientes: ["1 lata de grão-de-bico escorrido", "1 lata de atum light escorrido", "1 pepino picado", "1 tomate sem sementes picado", "1/4 de cebola roxa picada", "Suco de 1 limão", "2 colheres de sopa de azeite", "Hortelã fresca", "Sal e pimenta"],
-        preparo: "1. Misture todos os ingredientes em uma tigela grande.\n2. Tempere com suco de limão, azeite, sal e pimenta.\n3. Deixe na geladeira por 30 min para sabores se misturarem.\n4. Sirva sobre folhas verdes com fatias de pão integral.",
-        calorias: 280,
-        tempo: "15 minutos",
-        porcoes: "2 porções",
-        dificuldade: "Fácil",
-        gordura: "12g",
-        proteinas: "20g",
-        carboidratos: "25g",
-        dicas: "Adicione azeitonas ou alcaparras para sabor mediterrâneo. Substitua atum por tofu para versão vegetariana."
-    },
-    {
-        nome: "Escondidinho de Carne Moída com Batata-Doce",
-        ingredientes: ["500g de carne moída magra", "1 kg de batata-doce", "1 cebola picada", "2 dentes de alho", "1 tomate picado", "1/2 xícara de ervilhas", "1 colher de sopa de azeite", "Queijo cottage", "Salsinha"],
-        preparo: "1. Cozinhe batatas-doces até macias e faça purê.\n2. Refogue carne moída com cebola, alho e tomate.\n3. Adicione ervilhas e temperos.\n4. Em refratário, coloque carne, cubra com purê e queijo cottage.\n5. Asse a 180°C por 20 min até dourar.\n6. Finalize com salsinha.",
-        calorias: 380,
-        tempo: "60 minutos",
-        porcoes: "4 porções",
-        dificuldade: "Médio",
-        gordura: "15g",
-        proteinas: "25g",
-        carboidratos: "40g",
-        dicas: "Use lentilhas cozidas em vez de carne para versão vegana. Adicione cenoura ralada ao refogado."
-    },
-    {
-        nome: "Ratatouille Assado (Vegetariano)",
-        ingredientes: ["1 berinjela", "2 abobrinhas", "2 tomates", "1 pimentão vermelho", "1 pimentão amarelo", "1 cebola", "3 dentes de alho", "Manjericão fresco", "Tomilho", "Azeite", "Molho de tomate"],
-        preparo: "1. Corte todos os vegetais em rodelas finas.\n2. Em refratário, espalhe molho de tomate no fundo.\n3. Arrume rodelas alternadas verticalmente.\n4. Regue com azeite e tempere com ervas.\n5. Cubra com papel alumínio e asse a 180°C por 40 min.\n6. Remova alumínio e asse por mais 10 min.\n7. Sirva com polenta cremosa.",
-        calorias: 220,
-        tempo: "60 minutos",
-        porcoes: "4 porções",
-        dificuldade: "Médio",
-        gordura: "10g",
-        proteinas: "5g",
-        carboidratos: "30g",
-        dicas: "Adicione fatias de batata-doce para variedade. Sirva com queijo feta para sabor extra."
-    }
-];
-
-const receitasTarde = [
-    {
-        nome: "Smoothie de Frutas Vermelhas",
-        ingredientes: ["1 xícara de frutas vermelhas congeladas (morango, framboesa, amora)", "1/2 xícara de iogurte natural", "1/2 xícara de leite (ou leite vegetal)", "1 colher de sopa de mel ou xarope de bordo", "Folhas de hortelã para decorar"],
-        preparo: "1. Coloque todas as frutas congeladas no liquidificador.\n2. Adicione o iogurte, o leite e o mel.\n3. Bata em velocidade alta por 1-2 minutos até obter uma textura cremosa.\n4. Se necessário, adicione mais leite para ajustar a consistência.\n5. Despeje em um copo alto e decore com folhas de hortelã.\n6. Sirva imediatamente com um canudo reutilizável.",
-        calorias: 180,
-        tempo: "5 minutos",
-        porcoes: "1 porção",
-        dificuldade: "Fácil",
-        gordura: "2g",
-        proteinas: "6g",
-        carboidratos: "35g",
-        dicas: "Para um smoothie mais nutritivo, adicione uma colher de semente de linhaça ou chia. Se preferir mais doce, aumente a quantidade de mel."
-    },
-    {
-        nome: "Cookies de Aveia e Banana (Vegetariano)",
-        ingredientes: ["2 bananas maduras amassadas", "1 xícara de aveia em flocos", "1/4 de xícara de uvas passas", "1 colher de chá de canela", "1 colher de chá de essência de baunilha", "2 colheres de sopa de chips de chocolate amargo"],
-        preparo: "1. Pré-aqueça forno a 180°C.\n2. Misture todos os ingredientes até formar massa homogênea.\n3. Faça bolinhas e achate em assadeira forrada.\n4. Asse por 12-15 min até bordas dourarem.\n5. Deixe esfriar antes de servir.",
-        calorias: 120,
-        tempo: "25 minutos",
-        porcoes: "8 cookies",
-        dificuldade: "Fácil",
-        gordura: "3g",
-        proteinas: "3g",
-        carboidratos: "22g",
-        dicas: "Adicione nozes picadas para crocância. Substitua chips de chocolate por frutas secas para versão mais saudável."
-    },
-    {
-        nome: "Pão de Queijo Fit",
-        ingredientes: ["1 xícara de polvilho doce", "1/2 xícara de queijo minas light ralado", "1/2 xícara de requeijão light", "1 ovo", "1 colher de chá de fermento", "Orégano"],
-        preparo: "1. Pré-aqueça forno a 200°C.\n2. Misture todos os ingredientes até formar massa homogênea.\n3. Faça bolinhas e coloque em forma untada.\n4. Asse por 15-20 min até dourarem.\n5. Sirva quente.",
-        calorias: 85,
-        tempo: "30 minutos",
-        porcoes: "10 unidades",
-        dificuldade: "Fácil",
-        gordura: "3g",
-        proteinas: "6g",
-        carboidratos: "10g",
-        dicas: "Adicione ervas finas ou pimenta calabresa para sabor diferente. Congele cru e asse quando quiser."
-    },
-    {
-        nome: "Bolinho de Frango com Batata-Doce",
-        ingredientes: ["1 batata-doce cozida e amassada", "1 peito de frango cozido e desfiado", "1/2 cebola picada", "2 colheres de sopa de salsinha", "1 ovo", "Farinha de rosca integral", "Azeite"],
-        preparo: "1. Misture batata, frango, cebola, salsinha e ovo.\n2. Faça bolinhos e passe na farinha de rosca.\n3. Asse em forma untada a 200°C por 20 min.\n4. Vire na metade do tempo.\n5. Sirva com molho de iogurte.",
-        calorias: 150,
-        tempo: "40 minutos",
-        porcoes: "8 bolinhos",
-        dificuldade: "Médio",
-        gordura: "5g",
-        proteinas: "12g",
-        carboidratos: "15g",
-        dicas: "Substitua frango por grão-de-bico para versão vegana. Adicione cenoura ralada à massa."
-    },
-    {
-        nome: "Barrinha de Cereais Caseira",
-        ingredientes: ["1 xícara de aveia", "1/2 xícara de amêndoas picadas", "1/4 de xícara de sementes de abóbora", "1/4 de xícara de uvas passas", "1/4 de xícara de damascos picados", "1/4 de xícara de mel", "2 colheres de sopa de pasta de amendoim"],
-        preparo: "1. Pré-aqueça forno a 180°C.\n2. Misture ingredientes secos em uma tigela.\n3. Aqueça mel e pasta de amendoim até líquidos.\n4. Junte mistura seca e mexa bem.\n5. Pressione em forma quadrada forrada.\n6. Asse por 15-20 min.\n7. Corte em barras antes de esfriar completamente.",
-        calorias: 180,
-        tempo: "30 minutos",
-        porcoes: "10 barras",
-        dificuldade: "Fácil",
-        gordura: "8g",
-        proteinas: "5g",
-        carboidratos: "25g",
-        dicas: "Use diferentes combinações de nozes e frutas secas. Adicione proteína em pó para barrinha proteica."
-    },
-    {
-        nome: "Tapioca Recheada com Banana e Canela",
-        ingredientes: ["4 colheres de sopa de goma de tapioca", "1 banana fatiada", "1 colher de chá de canela", "1 colher de chá de óleo de coco", "1 colher de sopa de coco ralado"],
-        preparo: "1. Peneire tapioca em frigideira antiaderente quente.\n2. Cozinhe por 2 min, vire e cozinhe mais 1 min.\n3. Recheie com banana, canela e coco ralado.\n4. Dobre e sirva imediatamente.",
-        calorias: 210,
-        tempo: "10 minutos",
-        porcoes: "1 porção",
-        dificuldade: "Fácil",
-        gordura: "5g",
-        proteinas: "1g",
-        carboidratos: "45g",
-        dicas: "Adicione pasta de amendoim para mais proteína. Use banana congelada para textura de sorvete."
-    },
-    {
-        nome: "Muffins de Ovos e Espinafre",
-        ingredientes: ["4 ovos", "1 xícara de espinafre picado", "1/4 de xícara de queijo feta esfarelado", "1/4 de cebola roxa picada", "Sal e pimenta", "Orégano"],
-        preparo: "1. Pré-aqueça forno a 180°C.\n2. Misture todos os ingredientes em tigela.\n3. Despeje em forminhas para muffin untadas.\n4. Asse por 20-25 min até firmes.\n5. Deixe esfriar antes de desenformar.",
-        calorias: 90,
-        tempo: "35 minutos",
-        porcoes: "6 muffins",
-        dificuldade: "Fácil",
-        gordura: "6g",
-        proteinas: "7g",
-        carboidratos: "2g",
-        dicas: "Adicione tomate seco ou azeitonas para sabor mediterrâneo. Congele e aqueça quando precisar."
-    },
-    {
-        nome: "Palitos de Batata-Doce Assados",
-        ingredientes: ["2 batatas-doces grandes", "1 colher de sopa de azeite", "1 colher de chá de páprica defumada", "1/2 colher de chá de alho em pó", "Sal marinho", "Alecrim seco"],
-        preparo: "1. Pré-aqueça forno a 200°C.\n2. Corte batatas em palitos finos.\n3. Misture com temperos e azeite.\n4. Arrume em assadeira em camada única.\n5. Asse por 25-30 min, virando na metade.\n6. Sirva com homus ou guacamole.",
-        calorias: 120,
-        tempo: "40 minutos",
-        porcoes: "2 porções",
-        dificuldade: "Fácil",
-        gordura: "4g",
-        proteinas: "2g",
-        carboidratos: "20g",
-        dicas: "Corte uniformemente para cozimento igual. Adicione pimenta caiena para versão picante."
-    },
-    {
-        nome: "Crepioca de Frango Desfiado",
-        ingredientes: ["2 colheres de sopa de tapioca", "1 ovo", "1/4 de xícara de frango desfiado", "1 colher de sopa de milho", "Salsinha picada", "Pimenta calabresa"],
-        preparo: "1. Misture tapioca e ovo até homogêneo.\n2. Despeje em frigideira antiaderente quente.\n3. Quando começar a dourar, vire.\n4. Recheie com frango, milho e temperos.\n5. Dobre e sirva quente.",
-        calorias: 220,
-        tempo: "15 minutos",
-        porcoes: "1 porção",
-        dificuldade: "Fácil",
-        gordura: "8g",
-        proteinas: "18g",
-        carboidratos: "20g",
-        dicas: "Use atum ou tofu em vez de frango. Adicione requeijão light para cremosidade."
-    },
-    {
-        nome: "Frozen de Iogurte com Frutas",
-        ingredientes: ["2 potes de iogurte natural", "1 xícara de frutas vermelhas congeladas", "1 banana congelada", "1 colher de sopa de mel", "Granola para servir"],
-        preparo: "1. Bata todos os ingredientes no processador.\n2. Continue batendo até cremoso.\n3. Coloque em taças e decore com granola.\n4. Sirva imediatamente.",
-        calorias: 160,
-        tempo: "5 minutos",
-        porcoes: "2 porções",
-        dificuldade: "Fácil",
-        gordura: "2g",
-        proteinas: "6g",
-        carboidratos: "30g",
-        dicas: "Use diferentes combinações de frutas congeladas. Adicione chocolate amargo derretido por cima."
-    },
-    {
-        nome: "Sanduíche de Ricota e Mel",
-        ingredientes: ["2 fatias de pão integral", "3 colheres de ricota fresca", "1 colher de sopa de mel", "Canela em pó", "Nozes picadas"],
-        preparo: "1. Toque levemente o pão.\n2. Espalhe ricota sobre uma fatia.\n3. Regue com mel e polvilhe canela e nozes.\n4. Cubra com outra fatia de pão e corte ao meio.",
-        calorias: 250,
-        tempo: "5 minutos",
-        porcoes: "1 porção",
-        dificuldade: "Fácil",
-        gordura: "8g",
-        proteinas: "10g",
-        carboidratos: "35g",
-        dicas: "Adicione fatias de pera ou maçã para crocância. Use pão de centeio para sabor diferenciado."
-    },
-    {
-        nome: "Bolinho de Chuva Saudável",
-        ingredientes: ["1 xícara de farinha integral", "1 ovo", "1/2 xícara de leite", "1 colher de chá de fermento", "1 banana amassada", "Canela", "Óleo de coco"],
-        preparo: "1. Misture todos os ingredientes até massa homogênea.\n2. Aqueça óleo em panela funda.\n3. Frite colheradas de massa até dourarem.\n4. Escorra em papel toalha.\n5. Polvilhe com canela e açúcar de coco.",
-        calorias: 85,
+        ingredientes: ["1 filé de salmão", "6 aspargos", "Azeite", "Alho", "Limão", "Sal e pimenta"],
+        preparo: "1. Tempere o salmão com limão, sal e pimenta.\n2. Grelhe o salmão por 4 minutos de cada lado.\n3. Refogue os aspargos com alho e azeite.\n4. Sirva o salmão com os aspargos.",
         tempo: "20 minutos",
-        porcoes: "10 bolinhos",
-        dificuldade: "Fácil",
-        gordura: "3g",
-        proteinas: "3g",
-        carboidratos: "12g",
-        dicas: "Asse em forminha untada para versão light. Adicione gotas de chocolate ou frutas secas."
-    },
-    {
-        nome: "Veggie Wrap (Vegano)",
-        ingredientes: ["1 tortilha integral grande", "2 colheres de homus", "1/4 de abacate fatiado", "1/2 cenoura ralada", "1/4 de pepino em tiras", "Folhas de espinafre", "Broto de alfafa"],
-        preparo: "1. Espalhe homus sobre a tortilha.\n2. Arrume todos os vegetais em camadas.\n3. Enrole firmemente.\n4. Corte ao meio e sirva com palito para manter formato.",
-        calorias: 280,
-        tempo: "10 minutos",
-        porcoes: "1 porção",
-        dificuldade: "Fácil",
-        gordura: "15g",
-        proteinas: "8g",
-        carboidratos: "30g",
-        dicas: "Adicione tofu grelhado ou grão-de-bico para mais proteína. Use diferentes vegetais crus."
-    },
-    {
-        nome: "Maçã Assada com Canela",
-        ingredientes: ["2 maçãs vermelhas", "2 colheres de sopa de aveia", "1 colher de sopa de nozes picadas", "1 colher de sopa de mel", "1 colher de chá de canela", "1 colher de chá de manteiga"],
-        preparo: "1. Retire miolo das maçãs mantendo base intacta.\n2. Misture aveia, nozes, mel e metade da canela.\n3. Recheie as maçãs com a mistura.\n4. Coloque manteiga sobre cada maçã.\n5. Asse a 180°C por 25-30 min.\n6. Polvilhe canela restante antes de servir.",
-        calorias: 180,
-        tempo: "40 minutos",
-        porcoes: "2 porções",
-        dificuldade: "Fácil",
-        gordura: "6g",
-        proteinas: "2g",
-        carboidratos: "35g",
-        dicas: "Sirva com iogurte grego ou sorvete de coco. Adicione passas ou cranberries ao recheio."
-    },
-    {
-        nome: "Picolé de Iogurte e Frutas",
-        ingredientes: ["1 pote de iogurte natural", "1/2 xícara de frutas picadas (manga, kiwi, morango)", "1 colher de sopa de mel", "Forminhas para picolé"],
-        preparo: "1. Misture iogurte e mel.\n2. Distribua frutas nas forminhas.\n3. Despeje iogurte sobre as frutas.\n4. Insira palitos e congele por 4 horas.\n5. Para desenformar, passe forminhas em água morna.",
-        calorias: 70,
-        tempo: "10 minutos (mais tempo de congelamento)",
-        porcoes: "4 picolés",
-        dificuldade: "Fácil",
-        gordura: "1g",
-        proteinas: "3g",
-        carboidratos: "12g",
-        dicas: "Faça camadas alternadas de iogurte e frutas. Use frutas congeladas para textura mais cremosa."
-    }
-];
-
-const receitasNoite = [
-    {
-        nome: "Sopa de Legumes",
-        ingredientes: ["2 batatas médias descascadas e picadas", "2 cenouras médias descascadas e picadas", "1 abobrinha média picada", "1 cebola picada", "2 dentes de alho picados", "1 litro de caldo de legumes caseiro", "2 colheres de sopa de azeite", "Sal e pimenta a gosto", "Salsinha fresca picada", "1 folha de louro"],
-        preparo: "1. Em uma panela grande, aqueça o azeite em fogo médio.\n2. Adicione a cebola e o alho, refogue por 2-3 minutos até perfumar.\n3. Acrescente as batatas e cenouras, mexendo bem.\n4. Refogue por mais 5 minutos.\n5. Adicione o caldo de legumes e a folha de louro.\n6. Deixe ferver, reduza o fogo e cozinhe por 15 minutos com a panela semi-tampada.\n7. Adicione a abobrinha e cozinhe por mais 10 minutos.\n8. Tempere com sal e pimenta.\n9. Retire a folha de louro.\n10. Sirva quente, polvilhada com salsinha fresca.",
-        calorias: 150,
-        tempo: "40 minutos",
-        porcoes: "4 porções",
-        dificuldade: "Fácil",
-        gordura: "1g",
-        proteinas: "4g",
-        carboidratos: "32g",
-        dicas: "Para uma sopa cremosa, bata metade da sopa no liquidificador antes de servir. Adicione proteína com cubos de frango cozido ou grão-de-bico."
-    },
-    {
-        nome: "Quiche de Espinafre sem Massa (Vegetariano)",
-        ingredientes: ["4 ovos", "1 xícara de leite desnatado", "2 xícaras de espinafre fresco", "1/2 cebola picada", "1/2 xícara de queijo minas light picado", "Noz-moscada", "Sal e pimenta"],
-        preparo: "1. Pré-aqueça forno a 180°C.\n2. Refogue cebola e espinafre em frigideira.\n3. Bata ovos, leite e temperos.\n4. Em refratário, distribua espinafre e queijo.\n5. Despeje mistura de ovos.\n6. Asse por 30-35 min até firmar.\n7. Deixe descansar 5 min antes de cortar.",
-        calorias: 180,
-        tempo: "45 minutos",
-        porcoes: "4 fatias",
-        dificuldade: "Fácil",
-        gordura: "10g",
-        proteinas: "14g",
-        carboidratos: "8g",
-        dicas: "Adicione cogumelos ou tomate seco. Sirva com salada verde para refeição leve."
-    },
-    {
-        nome: "Frango Grelhado com Brócolis",
-        ingredientes: ["2 filés de frango (150g cada)", "1 cabeça de brócolis", "2 dentes de alho picados", "1 colher de sopa de azeite", "Suco de 1 limão", "Páprica", "Sal e pimenta"],
-        preparo: "1. Tempere frango com suco de limão, alho, páprica, sal e pimenta.\n2. Grelhe em frigideira 6-7 min cada lado.\n3. Cozinhe brócolis no vapor por 5 min.\n4. Salteie brócolis com azeite e alho por 2 min.\n5. Sirva frango sobre cama de brócolis.",
-        calorias: 280,
-        tempo: "25 minutos",
-        porcoes: "2 porções",
-        dificuldade: "Fácil",
-        gordura: "10g",
-        proteinas: "40g",
-        carboidratos: "10g",
-        dicas: "Marine frango por 30 min para mais sabor. Adicione batata-doce assada como acompanhamento."
-    },
-    {
-        nome: "Salada de Lentilhas com Atum",
-        ingredientes: ["1 xícara de lentilhas cozidas", "1 lata de atum light escorrido", "1/2 pepino picado", "1/2 pimentão vermelho picado", "2 colheres de sopa de azeitonas picadas", "Suco de 1 limão", "1 colher de sopa de azeite", "Hortelã fresca"],
-        preparo: "1. Misture todos os ingredientes em tigela grande.\n2. Tempere com suco de limão, azeite, sal e pimenta.\n3. Deixe na geladeira por 30 min.\n4. Finalize com hortelã picada antes de servir.",
-        calorias: 300,
-        tempo: "15 minutos",
-        porcoes: "2 porções",
-        dificuldade: "Fácil",
-        gordura: "10g",
-        proteinas: "25g",
-        carboidratos: "30g",
-        dicas: "Adicione ovo cozido picado para mais proteína. Use grão-de-bico em vez de lentilhas para variedade."
-    },
-    {
-        nome: "Berinjela Recheada (Vegetariano)",
-        ingredientes: ["2 berinjelas médias", "1 xícara de quinoa cozida", "1/2 cebola picada", "2 tomates picados", "1/2 xícara de queijo minas light", "Manjericão fresco", "Azeite", "Nozes picadas"],
-        preparo: "1. Corte berinjelas ao meio e retire polpa.\n2. Asse cascas a 200°C por 10 min.\n3. Refogue polpa picada com cebola e tomate.\n4. Misture quinoa, queijo, manjericão e temperos.\n5. Recheie as cascas e polvilhe nozes.\n6. Asse por 20 min até gratinar.\n7. Sirva com salada verde.",
-        calorias: 320,
-        tempo: "50 minutos",
-        porcoes: "4 metades",
-        dificuldade: "Médio",
-        gordura: "15g",
-        proteinas: "12g",
-        carboidratos: "35g",
-        dicas: "Para versão vegana, substitua queijo por tofu amassado. Adicione cogumelos ao recheio."
-    },
-    {
-        nome: "Peixe Assado com Legumes",
-        ingredientes: ["2 filés de pescada (150g cada)", "1 abobrinha em rodelas", "1 cenoura em rodelas finas", "1 cebola em gomos", "Suco de 1 limão", "Azeite", "Ervas finas", "Papel manteiga"],
-        preparo: "1. Tempere peixe com suco de limão e ervas.\n2. Em papel manteiga, arrume legumes.\n3. Coloque peixe sobre legumes e regue com azeite.\n4. Feche o papel formando pacote.\n5. Asse a 200°C por 20 min.\n6. Abra cuidadosamente antes de servir.",
-        calorias: 250,
-        tempo: "30 minutos",
-        porcoes: "2 porções",
-        dificuldade: "Fácil",
-        gordura: "8g",
-        proteinas: "30g",
-        carboidratos: "15g",
-        dicas: "Use diferentes peixes brancos. Adicione tomate cereja e azeitonas para sabor mediterrâneo."
-    },
-    {
-        nome: "Strogonoff de Cogumelos (Vegano)",
-        ingredientes: ["300g de cogumelos paris fatiados", "1 cebola picada", "2 dentes de alho", "1 colher de sopa de extrato de tomate", "1 xícara de creme de castanhas", "1 colher de sopa de mostarda dijon", "Salsinha", "Arroz integral"],
-        preparo: "1. Refogue cebola e alho em azeite.\n2. Adicione cogumelos e cozinhe até murchar.\n3. Incorpore extrato de tomate e mostarda.\n4. Adicione creme de castanhas e cozinhe por 5 min.\n5. Tempere com sal, pimenta e salsinha.\n6. Sirva com arroz integral e batata palha de forno.",
-        calorias: 280,
-        tempo: "25 minutos",
-        porcoes: "2 porções",
-        dificuldade: "Médio",
-        gordura: "18g",
-        proteinas: "8g",
-        carboidratos: "25g",
-        dicas: "Adicione palmito picado para variedade. Use creme de soja caso não tenha castanhas."
-    },
-    {
-        nome: "Frango Xadrez Light",
-        ingredientes: ["400g de peito de frango em cubos", "1 pimentão verde em cubos", "1 pimentão vermelho em cubos", "1 cebola em cubos", "1 colher de sopa de gengibre ralado", "2 colheres de sopa de molho shoyu light", "1 colher de chá de óleo de gergelim", "Castanha de caju"],
-        preparo: "1. Tempere frango com shoyu e reserve.\n2. Refogue vegetais em wok com pouco óleo.\n3. Adicione frango e cozinhe até dourado.\n4. Finalize com gergelim e cajus.\n5. Sirva com arroz integral.",
-        calorias: 320,
-        tempo: "30 minutos",
-        porcoes: "3 porções",
-        dificuldade: "Médio",
-        gordura: "10g",
-        proteinas: "35g",
-        carboidratos: "20g",
-        dicas: "Adicione abacaxi fresco para toque agridoce. Use amendoim se não tiver castanha de caju."
-    },
-    {
-        nome: "Nhoque de Batata-Doce com Manjericão",
-        ingredientes: ["2 batatas-doces cozidas", "1 ovo", "3/4 de xícara de farinha integral", "Sal", "Molho de tomate caseiro", "Folhas de manjericão"],
-        preparo: "1. Amasse batatas ainda quentes.\n2. Misture ovo, farinha e sal até massa homogênea.\n3. Faça rolinhos e corte em pedaços.\n4. Cozinhe em água fervente até subirem.\n5. Escorra e sirve com molho de tomate e manjericão.",
-        calorias: 380,
-        tempo: "50 minutos",
-        porcoes: "3 porções",
-        dificuldade: "Médio",
-        gordura: "5g",
-        proteinas: "10g",
-        carboidratos: "75g",
-        dicas: "Para versão vegana, substitua ovo por 1 colher de linhaça moída hidratada. Gratine com queijo cottage."
+        beneficio: "Rico em ômega-3"
     },
     {
         nome: "Wrap de Alface com Frango",
-        ingredientes: ["8 folhas grandes de alface americana", "1 peito de frango grelhado desfiado", "1/2 pepino em palito", "1 cenoura ralada", "1 abacate fatiado", "Molho: iogurte grego, suco de limão, endro"],
-        preparo: "1. Prepare molho misturando ingredientes.\n2. Arrume folhas de alface como concha.\n3. Coloque frango, vegetais e abacate.\n4. Regue com molho.\n5. Enrole como tacos e sirva.",
-        calorias: 280,
-        tempo: "20 minutos",
-        porcoes: "2 porções",
-        dificuldade: "Fácil",
-        gordura: "15g",
-        proteinas: "25g",
-        carboidratos: "15g",
-        dicas: "Substitua frango por grão-de-bico temperado. Adicione quinoa cozida para mais nutrientes."
+        ingredientes: ["Folhas de alface", "Frango desfiado", "Cenoura ralada", "Pepino em tiras", "Molho de iogurte"],
+        preparo: "1. Lave e seque as folhas de alface.\n2. Arrume o frango e vegetais no centro.\n3. Regue com molho de iogurte.\n4. Enrole como um wrap e sirva.",
+        tempo: "15 minutos",
+        beneficio: "Sem carboidratos"
     },
     {
-        nome: "Omelete de Forno com Vegetais",
-        ingredientes: ["4 ovos", "1/2 xícara de leite", "1/2 xícara de brócolis cozido", "1/4 de xícara de tomate picado", "2 colheres de sopa de queijo ralado", "Cebolinha", "Manteiga para untar"],
-        preparo: "1. Pré-aqueça forno a 180°C.\n2. Bata ovos e leite.\n3. Misture vegetais e cebolinha.\n4. Despeje em refratário untado.\n5. Polvilhe queijo.\n6. Asse por 20-25 min até firmar.\n7. Corte em quadrados.",
-        calorias: 180,
+        nome: "Crepioca Recheada",
+        ingredientes: ["2 colheres de tapioca", "1 ovo", "Requeijão light", "Peito de peru", "Orégano"],
+        preparo: "1. Misture tapioca e ovo.\n2. Despeje em frigideira quente.\n3. Vire quando começar a dourar.\n4. Recheie com requeijão e peito de peru.\n5. Dobre e sirva com salada.",
+        tempo: "12 minutos",
+        beneficio: "Prático e versátil"
+    },
+    {
+        nome: "Ovos Pochê com Espinafre",
+        ingredientes: ["2 ovos", "2 xícaras de espinafre", "1 colher de vinagre", "Sal e pimenta"],
+        preparo: "1. Aqueça água com vinagre até quase ferver.\n2. Quebre os ovos cuidadosamente na água.\n3. Cozinhe por 3-4 minutos.\n4. Retire com escumadeira.\n5. Sirva sobre espinafre refogado.",
+        tempo: "15 minutos",
+        beneficio: "Proteína de alta qualidade"
+    },
+    {
+        nome: "Quiche de Legumes",
+        ingredientes: ["2 ovos", "1/2 xícara de leite", "Brócolis", "Tomate", "Cebola", "Queijo minas light"],
+        preparo: "1. Bata ovos com leite.\n2. Adicione legumes picados.\n3. Despeje em refratário untado.\n4. Asse a 180°C por 25 minutos.\n5. Espere 5 minutos antes de cortar.",
         tempo: "35 minutos",
-        porcoes: "4 porções",
-        dificuldade: "Fácil",
-        gordura: "12g",
-        proteinas: "12g",
-        carboidratos: "5g",
-        dicas: "Adicione espinafre ou cogumelos. Sirva com salada para jantar leve."
+        beneficio: "Versátil e nutritivo"
     },
     {
-        nome: "Abobrinha Recheada com Quinoa (Vegano)",
-        ingredientes: ["2 abobrinhas italianas", "1 xícara de quinoa cozida", "1/2 cebola picada", "1 dente de alho", "1/2 pimentão amarelo picado", "2 colheres de sopa de castanhas picadas", "Salsinha", "Molho de tomate"],
-        preparo: "1. Corte abobrinhas ao meio e retire polpa.\n2. Asse cascas a 200°C por 10 min.\n3. Refogue polpa picada com vegetais.\n4. Misture quinoa, castanhas e salsinha.\n5. Recheie abobrinhas e cubra com molho.\n6. Asse por 20 min.\n7. Finalize com folhas de manjericão.",
-        calorias: 220,
-        tempo: "50 minutos",
-        porcoes: "4 metades",
-        dificuldade: "Médio",
-        gordura: "10g",
-        proteinas: "8g",
-        carboidratos: "30g",
-        dicas: "Adicione tofu defumado picado ao recheio. Polvilhe levedura nutricional antes de servir."
-    },
-    {
-        nome: "Salmão ao Molho de Mostarda e Mel",
-        ingredientes: ["2 filés de salmão (150g cada)", "2 colheres de sopa de mostarda dijon", "1 colher de sopa de mel", "Suco de 1/2 limão", "Aspargos verdes", "Batata-doce assada"],
-        preparo: "1. Misture mostarda, mel e suco de limão.\n2. Pincele salmão com a mistura.\n3. Asse a 200°C por 12-15 min.\n4. Grelhe aspargos com azeite e alho.\n5. Sirva com batata-doce em cubos assada.",
-        calorias: 420,
-        tempo: "30 minutos",
-        porcoes: "2 porções",
-        dificuldade: "Fácil",
-        gordura: "22g",
-        proteinas: "30g",
-        carboidratos: "25g",
-        dicas: "Adicione raspas de limão antes de servir. Substitua batata-doce por purê de couve-flor para low-carb."
-    },
-    {
-        nome: "Creme de Abóbora com Gengibre",
-        ingredientes: ["500g de abóbora cabotiá em cubos", "1 cebola picada", "1 dente de alho", "1 colher de chá de gengibre ralado", "2 xícaras de caldo de legumes", "1/2 xícara de leite de coco", "Noz-moscada", "Sementes de abóbora"],
-        preparo: "1. Asse abóbora com azeite a 200°C por 25 min.\n2. Refogue cebola, alho e gengibre.\n3. Adicione abóbora assada e caldo.\n4. Cozinhe por 10 min e bata no liquidificador.\n5. Volte à panela, adicione leite de coco e temperos.\n6. Sirva com sementes de abóbora tostadas.",
-        calorias: 180,
+        nome: "Frango ao Molho de Tomate",
+        ingredientes: ["2 sobrecoxas de frango", "1 lata de tomate pelado", "Cebola", "Alho", "Manjericão", "Azeite"],
+        preparo: "1. Doure o frango em panela.\n2. Adicione cebola e alho refogados.\n3. Junte o tomate e manjericão.\n4. Cozinhe em fogo baixo por 30 minutos.\n5. Sirva com vegetais cozidos.",
         tempo: "45 minutos",
-        porcoes: "3 porções",
-        dificuldade: "Fácil",
-        gordura: "10g",
-        proteinas: "4g",
-        carboidratos: "20g",
-        dicas: "Adicione cenoura para mais doçura. Sirva com croutons integrais caseiros."
+        beneficio: "Clássico saudável"
     },
     {
-        nome: "Frango ao Molho de Laranja",
-        ingredientes: ["400g de peito de frango em tiras", "Suco de 2 laranjas", "Raspas de 1 laranja", "1 colher de sopa de mel", "1 colher de sopa de gengibre ralado", "1 pimentão vermelho em tiras", "Broto de bambu", "Gergelim preto"],
-        preparo: "1. Doure frango em wok e reserve.\n2. Refogue pimentão por 3 min.\n3. Adicione suco, raspas, mel e gengibre.\n4. Cozinhe até reduzir pela metade.\n5. Volte frango e broto de bambu, cozinhe por 5 min.\n6. Finalize com gergelim.\n7. Sirva com arroz integral.",
-        calorias: 350,
+        nome: "Salada de Lentilha",
+        ingredientes: ["1 xícara de lentilha cozida", "Tomate", "Pepino", "Cebola roxa", "Salsinha", "Limão e azeite"],
+        preparo: "1. Misture todos os ingredientes em tigela.\n2. Tempere com limão, azeite, sal e pimenta.\n3. Deixe na geladeira por 15 minutos antes de servir.",
+        tempo: "20 minutos",
+        beneficio: "Proteína vegetal e fibras"
+    },
+    {
+        nome: "Abobrinha Recheada",
+        ingredientes: ["2 abobrinhas", "Carne moída magra", "Cebola", "Alho", "Molho de tomate", "Queijo ralado"],
+        preparo: "1. Corte as abobrinhas ao meio e retire o miolo.\n2. Refogue a carne com cebola e alho.\n3. Recheie as abobrinhas.\n4. Cubra com molho de tomate e queijo.\n5. Asse a 200°C por 25 minutos.",
+        tempo: "45 minutos",
+        beneficio: "Baixo carboidrato"
+    },
+    {
+        nome: "Peixe Assado com Legumes",
+        ingredientes: ["2 filés de peixe", "Batata", "Cenoura", "Abobrinha", "Azeite", "Ervas finas"],
+        preparo: "1. Corte os legumes em cubos.\n2. Tempere o peixe e os legumes.\n3. Arrume em assadeira forrada.\n4. Asse a 200°C por 25 minutos.\n5. Sirva com limão.",
+        tempo: "35 minutos",
+        beneficio: "Completo e leve"
+    },
+    {
+        nome: "Frango com Brócolis",
+        ingredientes: ["1 peito de frango", "1 brócolis", "Alho", "Gengibre", "Molho shoyu light", "Óleo de gergelim"],
+        preparo: "1. Corte o frango em cubos.\n2. Separe o brócolis em floretes.\n3. Refogue o alho e gengibre.\n4. Adicione o frango e doure.\n5. Junte o brócolis e cozinhe por 5 minutos.\n6. Tempere com shoyu e gergelim.",
+        tempo: "25 minutos",
+        beneficio: "Rápido e nutritivo"
+    },
+    {
+        nome: "Omelete de Forno",
+        ingredientes: ["3 ovos", "1/2 xícara de leite", "Tomate seco", "Espinafre", "Queijo feta", "Orégano"],
+        preparo: "1. Bata os ovos com leite.\n2. Adicione os demais ingredientes picados.\n3. Despeje em refratário untado.\n4. Asse a 180°C por 20 minutos.\n5. Corte em quadrados e sirva.",
         tempo: "30 minutos",
-        porcoes: "3 porções",
-        dificuldade: "Médio",
-        gordura: "8g",
-        proteinas: "35g",
-        carboidratos: "30g",
-        dicas: "Adicione castanhas de caju para crocância. Use abacaxi fresco para versão agridoce."
+        beneficio: "Versátil e proteico"
     }
 ];
 
