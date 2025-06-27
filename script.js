@@ -792,17 +792,23 @@ const receitasNoite = [
 ];
 
 
-
 // Elementos do DOM
 const chatContainer = document.getElementById('chatContainer');
-const userInput = document.getElementById('userInput');
-const sendButton = document.getElementById('sendButton');
-const quickSuggestions = document.getElementById('quickSuggestions');
+const responseButtons = document.getElementById('responseButtons');
 const statusText = document.getElementById('statusText');
 const statusIndicator = document.getElementById('statusIndicator');
-let userName = '';
-let contextoAtual = 'inicio';
+
+// Variáveis de estado
 let periodoAtual = '';
+let receitasMostradas = [];
+let respostasRobo = [
+    "Aqui estão minhas sugestões:",
+    "Que tal uma destas opções?",
+    "Tenho ótimas ideias para você:",
+    "Preparei estas sugestões deliciosas:",
+    "Veja estas opções saudáveis:",
+    "Que tal experimentar uma destas?"
+];
 
 // Funções de utilidade
 function adicionarMensagem(texto, isUser = false) {
@@ -827,33 +833,67 @@ function adicionarMensagem(texto, isUser = false) {
     chatContainer.scrollTop = chatContainer.scrollHeight;
 }
 
+function limparBotoesResposta() {
+    responseButtons.innerHTML = '';
+}
+
+function adicionarBotoesResposta(botoes) {
+    limparBotoesResposta();
+    botoes.forEach(botao => {
+        const button = document.createElement('button');
+        button.textContent = botao.texto;
+        button.className = botao.secundario ? 'btn-resposta secundario' : 'btn-resposta';
+        button.addEventListener('click', botao.acao);
+        responseButtons.appendChild(button);
+    });
+}
+
+function getReceitasPorPeriodo(periodo) {
+    switch(periodo) {
+        case 'manha': return receitasManha;
+        case 'almoco': return receitasAlmoco;
+        case 'tarde': return receitasTarde;
+        case 'noite': return receitasNoite;
+        default: return [];
+    }
+}
+
+function getNomePeriodo(periodo) {
+    const periodos = {
+        manha: 'Café da Manhã',
+        almoco: 'Almoço',
+        tarde: 'Lanche da Tarde',
+        noite: 'Jantar'
+    };
+    return periodos[periodo];
+}
+
 function mostrarReceitas(periodo) {
     periodoAtual = periodo;
-    let receitas = [];
-    let titulo = '';
+    const todasReceitas = getReceitasPorPeriodo(periodo);
     
-    switch(periodo) {
-        case 'manha':
-            receitas = receitasManha;
-            titulo = 'Café da Manhã';
-            break;
-        case 'almoco':
-            receitas = receitasAlmoco;
-            titulo = 'Almoço';
-            break;
-        case 'tarde':
-            receitas = receitasTarde;
-            titulo = 'Lanche da Tarde';
-            break;
-        case 'noite':
-            receitas = receitasNoite;
-            titulo = 'Jantar';
-            break;
+    // Selecionar 2 receitas aleatórias que ainda não foram mostradas
+    let receitasDisponiveis = todasReceitas.filter(r => !receitasMostradas.includes(r.nome));
+    
+    // Se já mostramos todas, reinicia
+    if (receitasDisponiveis.length < 2) {
+        receitasMostradas = [];
+        receitasDisponiveis = todasReceitas;
     }
     
-    adicionarMensagem(`Aqui estão minhas sugestões para ${titulo.toLowerCase()}:`, false);
+    // Embaralha as receitas disponíveis
+    const receitasEmbaralhadas = [...receitasDisponiveis].sort(() => 0.5 - Math.random());
+    const receitasSelecionadas = receitasEmbaralhadas.slice(0, 2);
     
-    receitas.forEach(receita => {
+    // Adiciona às receitas mostradas
+    receitasSelecionadas.forEach(r => receitasMostradas.push(r.nome));
+    
+    // Mensagem do robô com variação
+    const mensagemAleatoria = respostasRobo[Math.floor(Math.random() * respostasRobo.length)];
+    adicionarMensagem(mensagemAleatoria, false);
+    
+    // Exibe as receitas
+    receitasSelecionadas.forEach(receita => {
         const mensagemDiv = document.createElement('div');
         mensagemDiv.className = 'mensagem robo';
         
@@ -864,8 +904,8 @@ function mostrarReceitas(periodo) {
         const textoDiv = document.createElement('div');
         textoDiv.className = 'texto';
         
-        const titulo = document.createElement('p');
-        titulo.innerHTML = `<strong>${receita.nome}</strong>`;
+        const titulo = document.createElement('h3');
+        titulo.textContent = receita.nome;
         
         const receitaDiv = document.createElement('div');
         receitaDiv.className = 'receita';
@@ -873,10 +913,10 @@ function mostrarReceitas(periodo) {
         const infoDiv = document.createElement('div');
         infoDiv.className = 'info-receita';
         infoDiv.innerHTML = `
-            <div class="info-item"><span>⏱️</span> <span>${receita.tempo}</span></div>
-            <div class="info-item"><span>🍽️</span> <span>${receita.porcoes}</span></div>
-            <div class="info-item"><span>📊</span> <span>${receita.dificuldade}</span></div>
-            <div class="info-item"><span>🔥</span> <span>${receita.calorias} kcal</span></div>
+            <div class="info-item">⏱️ <span>${receita.tempo}</span></div>
+            <div class="info-item">🍽️ <span>${receita.porcoes}</span></div>
+            <div class="info-item">📊 <span>${receita.dificuldade}</span></div>
+            <div class="info-item">🔥 <span>${receita.calorias} kcal</span></div>
         `;
         
         const ingredientesDiv = document.createElement('div');
@@ -886,33 +926,8 @@ function mostrarReceitas(periodo) {
             <ul>${receita.ingredientes.map(ing => `<li>${ing}</li>`).join('')}</ul>
         `;
         
-        const preparoDiv = document.createElement('div');
-        preparoDiv.className = 'preparo';
-        preparoDiv.innerHTML = `
-            <h4>👩‍🍳 Modo de preparo:</h4>
-            <p>${receita.preparo.replace(/\n/g, '<br>')}</p>
-        `;
-        
-        const nutricaoDiv = document.createElement('div');
-        nutricaoDiv.className = 'info-receita';
-        nutricaoDiv.innerHTML = `
-            <div class="info-item"><span>💪</span> <span>Proteínas: ${receita.proteinas}</span></div>
-            <div class="info-item"><span>🍞</span> <span>Carboidratos: ${receita.carboidratos}</span></div>
-            <div class="info-item"><span>🥑</span> <span>Gorduras: ${receita.gordura}</span></div>
-        `;
-        
-        const dicasDiv = document.createElement('div');
-        dicasDiv.className = 'dicas';
-        dicasDiv.innerHTML = `
-            <h4>💡 Dicas:</h4>
-            <p>${receita.dicas}</p>
-        `;
-        
         receitaDiv.appendChild(infoDiv);
         receitaDiv.appendChild(ingredientesDiv);
-        receitaDiv.appendChild(preparoDiv);
-        receitaDiv.appendChild(nutricaoDiv);
-        receitaDiv.appendChild(dicasDiv);
         
         textoDiv.appendChild(titulo);
         textoDiv.appendChild(receitaDiv);
@@ -922,106 +937,135 @@ function mostrarReceitas(periodo) {
         chatContainer.appendChild(mensagemDiv);
     });
     
-    adicionarMensagem('Qual outra refeição você gostaria de ver? Ou me diga quais ingredientes você tem disponíveis!', false);
+    // Adiciona botões de resposta
+    const botoes = receitasSelecionadas.map((receita, index) => ({
+        texto: `Ver ${receita.nome}`,
+        acao: () => mostrarReceitaCompleta(receita)
+    }));
+    
+    botoes.push({
+        texto: "Nenhuma dessas, mostrar outras",
+        acao: () => mostrarReceitas(periodo),
+        secundario: true
+    });
+    
+    botoes.push({
+        texto: "Voltar ao menu",
+        acao: mostrarMenuPrincipal,
+        secundario: true
+    });
+    
+    adicionarBotoesResposta(botoes);
     chatContainer.scrollTop = chatContainer.scrollHeight;
 }
 
-function processarEntradaUsuario(entrada) {
-    entrada = entrada.toLowerCase().trim();
+function mostrarReceitaCompleta(receita) {
+    const mensagemDiv = document.createElement('div');
+    mensagemDiv.className = 'mensagem robo';
     
-    switch(contextoAtual) {
-        case 'inicio':
-            if (entrada.length > 0) {
-                userName = entrada;
-                contextoAtual = 'principal';
-                adicionarMensagem(`Prazer em conhecê-lo, ${userName}! Eu sou o RoboChef, seu assistente culinário pessoal.`, false);
-                
-                const hora = new Date().getHours();
-                let periodo = '';
-                if (hora >= 5 && hora < 11) periodo = 'manha';
-                else if (hora >= 11 && hora < 14) periodo = 'almoco';
-                else if (hora >= 14 && hora < 18) periodo = 'tarde';
-                else periodo = 'noite';
-                
-                setTimeout(() => {
-                    adicionarMensagem(`Com base no horário atual, aqui estão minhas sugestões para sua próxima refeição:`, false);
-                    mostrarReceitas(periodo);
-                }, 1000);
-            } else {
-                adicionarMensagem('Por favor, me diga como devo chamá-lo!', false);
-            }
-            break;
-            
-        case 'principal':
-            if (entrada.includes('manhã') || entrada.includes('café')) {
-                mostrarReceitas('manha');
-            } 
-            else if (entrada.includes('almoço')) {
-                mostrarReceitas('almoco');
-            } 
-            else if (entrada.includes('tarde') || entrada.includes('lanche')) {
-                mostrarReceitas('tarde');
-            } 
-            else if (entrada.includes('noite') || entrada.includes('jantar')) {
-                mostrarReceitas('noite');
-            }
-            else if (entrada.includes('obrigado') || entrada.includes('obrigada')) {
-                adicionarMensagem(`De nada, ${userName}! Estou sempre aqui para ajudar. 😊`, false);
-            }
-            else {
-                adicionarMensagem('Desculpe, não entendi. Você pode escolher uma refeição: café da manhã, almoço, lanche da tarde ou jantar.', false);
-            }
-            break;
-    }
+    const avatarDiv = document.createElement('div');
+    avatarDiv.className = 'avatar';
+    avatarDiv.textContent = '🤖';
+    
+    const textoDiv = document.createElement('div');
+    textoDiv.className = 'texto';
+    
+    const titulo = document.createElement('h3');
+    titulo.textContent = receita.nome;
+    
+    const receitaDiv = document.createElement('div');
+    receitaDiv.className = 'receita';
+    
+    const infoDiv = document.createElement('div');
+    infoDiv.className = 'info-receita';
+    infoDiv.innerHTML = `
+        <div class="info-item">⏱️ <span>${receita.tempo}</span></div>
+        <div class="info-item">🍽️ <span>${receita.porcoes}</span></div>
+        <div class="info-item">📊 <span>${receita.dificuldade}</span></div>
+        <div class="info-item">🔥 <span>${receita.calorias} kcal</span></div>
+    `;
+    
+    const ingredientesDiv = document.createElement('div');
+    ingredientesDiv.className = 'ingredientes';
+    ingredientesDiv.innerHTML = `
+        <h4>📋 Ingredientes:</h4>
+        <ul>${receita.ingredientes.map(ing => `<li>${ing}</li>`).join('')}</ul>
+    `;
+    
+    const preparoDiv = document.createElement('div');
+    preparoDiv.className = 'preparo';
+    preparoDiv.innerHTML = `
+        <h4>👩‍🍳 Modo de preparo:</h4>
+        <p>${receita.preparo.replace(/\n/g, '<br>')}</p>
+    `;
+    
+    const nutricaoDiv = document.createElement('div');
+    nutricaoDiv.className = 'info-receita';
+    nutricaoDiv.innerHTML = `
+        <div class="info-item">💪 <span>Proteínas: ${receita.proteinas}</span></div>
+        <div class="info-item">🍞 <span>Carboidratos: ${receita.carboidratos}</span></div>
+        <div class="info-item">🥑 <span>Gorduras: ${receita.gordura}</span></div>
+    `;
+    
+    const dicasDiv = document.createElement('div');
+    dicasDiv.className = 'dicas';
+    dicasDiv.innerHTML = `
+        <h4>💡 Dicas:</h4>
+        <p>${receita.dicas}</p>
+    `;
+    
+    receitaDiv.appendChild(infoDiv);
+    receitaDiv.appendChild(ingredientesDiv);
+    receitaDiv.appendChild(preparoDiv);
+    receitaDiv.appendChild(nutricaoDiv);
+    receitaDiv.appendChild(dicasDiv);
+    
+    textoDiv.appendChild(titulo);
+    textoDiv.appendChild(receitaDiv);
+    mensagemDiv.appendChild(avatarDiv);
+    mensagemDiv.appendChild(textoDiv);
+    
+    chatContainer.appendChild(mensagemDiv);
+    
+    // Botões após mostrar receita completa
+    adicionarBotoesResposta([
+        { 
+            texto: "Ver mais opções", 
+            acao: () => mostrarReceitas(periodoAtual)
+        },
+        { 
+            texto: "Voltar ao menu", 
+            acao: mostrarMenuPrincipal,
+            secundario: true
+        }
+    ]);
+    
+    chatContainer.scrollTop = chatContainer.scrollHeight;
 }
 
-// Event Listeners
-sendButton.addEventListener('click', () => {
-    const entrada = userInput.value.trim();
-    if (entrada) {
-        adicionarMensagem(entrada, true);
-        userInput.value = '';
-        setTimeout(() => processarEntradaUsuario(entrada), 500);
-    }
-});
+function mostrarMenuPrincipal() {
+    adicionarMensagem("Qual refeição você gostaria de ver?", false);
+    adicionarBotoesResposta([
+        { texto: "Café da Manhã", acao: () => mostrarReceitas('manha') },
+        { texto: "Almoço", acao: () => mostrarReceitas('almoco') },
+        { texto: "Lanche da Tarde", acao: () => mostrarReceitas('tarde') },
+        { texto: "Jantar", acao: () => mostrarReceitas('noite') }
+    ]);
+}
 
-userInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-        sendButton.click();
-    }
-});
+// Inicialização
+function iniciarApp() {
+    // Simular status online
+    setTimeout(() => {
+        statusText.textContent = 'Digitando...';
+        setTimeout(() => {
+            statusText.textContent = 'Online';
+            mostrarMenuPrincipal();
+        }, 1500);
+    }, 500);
+}
 
-document.querySelectorAll('.btn-sugestao').forEach(botao => {
-    botao.addEventListener('click', () => {
-        const periodo = botao.dataset.sugestao;
-        adicionarMensagem(botao.textContent, true);
-        setTimeout(() => mostrarReceitas(periodo), 500);
-    });
-});
-
-// PWA Installation
-window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    const installButton = document.querySelector('.pwa-install');
-    installButton.style.display = 'inline-flex';
-    
-    installButton.addEventListener('click', () => {
-        e.prompt();
-        e.userChoice.then((choiceResult) => {
-            if (choiceResult.outcome === 'accepted') {
-                installButton.textContent = '✅ App instalado!';
-            }
-            installButton.style.pointerEvents = 'none';
-        });
-    });
-});
-
-// Verificar se já está instalado
-window.addEventListener('appinstalled', () => {
-    document.querySelector('.pwa-install').textContent = '✅ App instalado!';
-});
-
-// Simular status online/offline
+// Verificar status online/offline
 window.addEventListener('online', () => {
     statusText.textContent = 'Online';
     statusIndicator.style.color = '#4CAF50';
@@ -1033,10 +1077,5 @@ window.addEventListener('offline', () => {
     adicionarMensagem('Estou offline no momento, mas você ainda pode ver as receitas já carregadas!', false);
 });
 
-// Inicialização
-setTimeout(() => {
-    statusText.textContent = 'Digitando...';
-    setTimeout(() => {
-        statusText.textContent = 'Online';
-    }, 1500);
-}, 500);
+// Iniciar o aplicativo
+document.addEventListener('DOMContentLoaded', iniciarApp);

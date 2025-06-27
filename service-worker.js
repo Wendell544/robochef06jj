@@ -1,4 +1,4 @@
-const CACHE_NAME = 'robochef-v3';
+const CACHE_NAME = 'robochef-v4';
 const urlsToCache = [
   './',
   './index.html',
@@ -22,11 +22,9 @@ self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
       .then(response => {
-        // Retorna do cache se encontrado, senão faz a requisição
         return response || fetch(event.request);
       })
       .catch(() => {
-        // Fallback para página offline
         if (event.request.mode === 'navigate') {
           return caches.match('./index.html');
         }
