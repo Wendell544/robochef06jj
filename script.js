@@ -791,7 +791,6 @@ const receitasNoite = [
     }
 ];
 
-
 // Elementos do DOM
 const chatContainer = document.getElementById('chatContainer');
 const responseButtons = document.getElementById('responseButtons');
