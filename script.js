@@ -791,25 +791,14 @@ const receitasNoite = [
     }
 ];
 
-// Elementos do DOM
 const chatContainer = document.getElementById('chatContainer');
 const responseButtons = document.getElementById('responseButtons');
 const statusText = document.getElementById('statusText');
 const statusIndicator = document.getElementById('statusIndicator');
 
-// Variáveis de estado
 let periodoAtual = '';
 let receitasMostradas = [];
-let respostasRobo = [
-    "Aqui estão minhas sugestões:",
-    "Que tal uma destas opções?",
-    "Tenho ótimas ideias para você:",
-    "Preparei estas sugestões deliciosas:",
-    "Veja estas opções saudáveis:",
-    "Que tal experimentar uma destas?"
-];
 
-// Funções de utilidade
 function adicionarMensagem(texto, isUser = false) {
     const mensagemDiv = document.createElement('div');
     mensagemDiv.className = `mensagem ${isUser ? 'usuario' : 'robo'}`;
@@ -867,10 +856,9 @@ function getNomePeriodo(periodo) {
     return periodos[periodo];
 }
 
-// Função para obter o período atual do dia
 function getPeriodoAtual() {
     const horaAtual = new Date().getHours();
-    if (horaAtual >= 6 && horaAtual < 10) return 'manha';
+    if (horaAtual >= 5 && horaAtual < 10) return 'manha';
     if (horaAtual >= 10 && horaAtual < 14) return 'almoco';
     if (horaAtual >= 14 && horaAtual < 18) return 'tarde';
     return 'noite';
@@ -879,35 +867,46 @@ function getPeriodoAtual() {
 function mostrarReceitas(periodo) {
     periodoAtual = periodo;
     const todasReceitas = getReceitasPorPeriodo(periodo);
-    
-    // Verificar se o período selecionado é o atual
     const periodoDoDia = getPeriodoAtual();
+    
     if (periodo !== periodoDoDia) {
-        const mensagemMotivacional = `Estou vendo que você está planejando ${getNomePeriodo(periodo).toLowerCase()} com antecedência! Isso é ótimo para manter uma rotina saudável. Vamos às opções:`;
-        adicionarMensagem(mensagemMotivacional, false);
+        const periodoNome = getNomePeriodo(periodo).toLowerCase();
+        const mensagem = `Hmm... vi que você está procurando receitas para ${periodoNome}, mas agora é hora do ${getNomePeriodo(periodoDoDia).toLowerCase()}! 😊\n\nManter a rotina é importante para uma alimentação saudável. Deseja ver sugestões para agora ou prefere continuar com ${periodoNome}?`;
+        adicionarMensagem(mensagem, false);
+        
+        adicionarBotoesResposta([
+            { 
+                texto: `Ver ${getNomePeriodo(periodoDoDia)}`, 
+                acao: () => mostrarReceitas(periodoDoDia)
+            },
+            { 
+                texto: `Continuar com ${getNomePeriodo(periodo)}`, 
+                acao: () => mostrarOpcoesReceitas(periodo),
+                secundario: true
+            }
+        ]);
+        return;
     }
     
-    // Selecionar 2 receitas aleatórias que ainda não foram mostradas
+    mostrarOpcoesReceitas(periodo);
+}
+
+function mostrarOpcoesReceitas(periodo) {
+    const todasReceitas = getReceitasPorPeriodo(periodo);
     let receitasDisponiveis = todasReceitas.filter(r => !receitasMostradas.includes(r.nome));
     
-    // Se já mostramos todas, reinicia
     if (receitasDisponiveis.length < 2) {
         receitasMostradas = [];
         receitasDisponiveis = todasReceitas;
     }
     
-    // Embaralha as receitas disponíveis
     const receitasEmbaralhadas = [...receitasDisponiveis].sort(() => 0.5 - Math.random());
     const receitasSelecionadas = receitasEmbaralhadas.slice(0, 2);
     
-    // Adiciona às receitas mostradas
     receitasSelecionadas.forEach(r => receitasMostradas.push(r.nome));
     
-    // Mensagem do robô com variação
-    const mensagemAleatoria = respostasRobo[Math.floor(Math.random() * respostasRobo.length)];
-    adicionarMensagem(mensagemAleatoria, false);
+    adicionarMensagem(`Aqui estão minhas sugestões para ${getNomePeriodo(periodo).toLowerCase()}:`, false);
     
-    // Exibe as receitas
     receitasSelecionadas.forEach(receita => {
         const mensagemDiv = document.createElement('div');
         mensagemDiv.className = 'mensagem robo';
@@ -952,15 +951,14 @@ function mostrarReceitas(periodo) {
         chatContainer.appendChild(mensagemDiv);
     });
     
-    // Adiciona botões de resposta
-    const botoes = receitasSelecionadas.map((receita, index) => ({
+    const botoes = receitasSelecionadas.map(receita => ({
         texto: `Ver ${receita.nome}`,
         acao: () => mostrarReceitaCompleta(receita)
     }));
     
     botoes.push({
-        texto: "Nenhuma dessas, mostrar outras",
-        acao: () => mostrarReceitas(periodo),
+        texto: "Mostrar outras opções",
+        acao: () => mostrarOpcoesReceitas(periodo),
         secundario: true
     });
     
@@ -1042,11 +1040,10 @@ function mostrarReceitaCompleta(receita) {
     
     chatContainer.appendChild(mensagemDiv);
     
-    // Botões após mostrar receita completa
     adicionarBotoesResposta([
         { 
             texto: "Ver mais opções", 
-            acao: () => mostrarReceitas(periodoAtual)
+            acao: () => mostrarOpcoesReceitas(periodoAtual)
         },
         { 
             texto: "Voltar ao menu", 
@@ -1068,9 +1065,7 @@ function mostrarMenuPrincipal() {
     ]);
 }
 
-// Inicialização
 function iniciarApp() {
-    // Simular status online
     setTimeout(() => {
         statusText.textContent = 'Digitando...';
         setTimeout(() => {
@@ -1080,7 +1075,6 @@ function iniciarApp() {
     }, 500);
 }
 
-// Verificar status online/offline
 window.addEventListener('online', () => {
     statusText.textContent = 'Online';
     statusIndicator.style.color = '#4CAF50';
@@ -1089,8 +1083,7 @@ window.addEventListener('online', () => {
 window.addEventListener('offline', () => {
     statusText.textContent = 'Offline';
     statusIndicator.style.color = '#F44336';
-    adicionarMensagem('Estou offline no momento, mas você ainda pode ver as receitas já carregadas!', false);
+    adicionarMensagem('Estou offline, mas você pode ver as receitas já carregadas!', false);
 });
 
-// Iniciar o aplicativo
 document.addEventListener('DOMContentLoaded', iniciarApp);

@@ -1,18 +1,16 @@
-const CACHE_NAME = 'robochef-v4';
+const CACHE_NAME = 'robochef-v5';
 const urlsToCache = [
   './',
   './index.html',
   './style.css',
   './script.js',
-  './manifest.json',
-  'https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap'
+  './manifest.json'
 ];
 
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
-        console.log('Cache aberto');
         return cache.addAll(urlsToCache);
       })
   );
@@ -23,11 +21,6 @@ self.addEventListener('fetch', event => {
     caches.match(event.request)
       .then(response => {
         return response || fetch(event.request);
-      })
-      .catch(() => {
-        if (event.request.mode === 'navigate') {
-          return caches.match('./index.html');
-        }
       })
   );
 });

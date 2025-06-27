@@ -1,15 +1,13 @@
 :root {
     --rosa: #FF9AA2;
     --laranja: #FFD3B6;
-    --verde-claro: #E2F0CB;
-    --azul-claro: #B5EAD7;
-    --roxo-claro: #C7CEEA;
     --branco: #FFFFFF;
     --cinza: #F5F5F5;
     --cinza-escuro: #333333;
     --cinza-chat: #F0F0F0;
     --sombra: rgba(0, 0, 0, 0.1);
     --sombra-chat: rgba(0, 0, 0, 0.08);
+    --cor-receita: #FFEDE0;
 }
 
 * {
@@ -41,7 +39,7 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    max-width: 900px; /* Largura aumentada */
+    max-width: 900px;
 }
 
 header {
@@ -123,7 +121,7 @@ header h1 {
 }
 
 .mensagem.usuario .texto {
-    background-color: var(--laranja); /* Cor alterada */
+    background-color: var(--laranja);
     border-radius: 18px 18px 4px 18px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
@@ -132,7 +130,7 @@ header h1 {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: var(--laranja); /* Cor alterada */
+    background-color: var(--laranja);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,13 +157,13 @@ header h1 {
 }
 
 .receita {
-    background-color: var(--verde-claro);
+    background-color: var(--cor-receita);
     border-radius: 15px;
     padding: 20px;
     margin-top: 15px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.05);
     width: 100%;
-    max-width: 100%; /* Largura aumentada */
+    max-width: 100%;
 }
 
 .receita h3 {
@@ -236,7 +234,7 @@ li {
     padding: 14px 20px;
     border: none;
     border-radius: 30px;
-    background-color: var(--laranja); /* Cor alterada */
+    background-color: var(--laranja);
     color: var(--cinza-escuro);
     font-size: 1.05rem;
     cursor: pointer;
@@ -253,7 +251,7 @@ li {
 }
 
 .btn-resposta.secundario {
-    background-color: var(--rosa); /* Cor alterada */
+    background-color: var(--rosa);
     color: white;
 }
 
@@ -263,7 +261,7 @@ footer {
     font-size: 0.8rem;
     color: var(--cinza-escuro);
     opacity: 0.8;
-    background-color: var(--laranja); /* Cor alterada */
+    background-color: var(--laranja);
     margin-top: auto;
 }
 
@@ -296,7 +294,7 @@ footer {
     
     .receita {
         padding: 25px;
-        max-width: 100%; /* Largura máxima aumentada */
+        max-width: 100%;
     }
     
     .btn-resposta {
