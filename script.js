@@ -853,7 +853,7 @@ const receitasNoite = [
         beneficio: "Vegetais, proteína"
     }
 ];
-</script>
+
 const chatContainer = document.getElementById('chatContainer');
 const responseButtons = document.getElementById('responseButtons');
 const statusText = document.getElementById('statusText');
