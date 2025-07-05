@@ -284,9 +284,299 @@ const receitasManha = [
         proteinas: "12g",
         carboidratos: "35g",
         dicas: "Adicione rúcula ou brotos para crocância. Use ovo pochê se preferir gema mole. Regue com azeite para sabor extra."
+    },    
+    {
+        nome: "Torrada com Ovo Mexido e Tomate",
+        ingredientes: [
+            "2 fatias de pão integral",
+            "2 ovos",
+            "1 tomate picado",
+            "1 colher (chá) de manteiga",
+            "Sal e pimenta a gosto"
+        ],
+        preparo: "1. Toste o pão.\n2. Derreta manteiga em frigideira e cozinhe os ovos mexidos.\n3. Tempere com sal e pimenta.\n4. Sirva sobre as torradas com tomate picado.",
+        calorias: 250,
+        tempo: "10 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "12g",
+        proteinas: "15g",
+        carboidratos: "25g",
+        dicas: "Adicione queijo ralado por cima. Substitua tomate por cebolinha picada."
+    },
+    {
+        nome: "Mingau de Fubá Cremoso",
+        ingredientes: [
+            "3 colheres (sopa) de fubá",
+            "1 xícara de leite",
+            "1 colher (sopa) de açúcar",
+            "1 pitada de sal",
+            "Canela em pó"
+        ],
+        preparo: "1. Misture fubá com um pouco de leite frio.\n2. Ferva o restante do leite com açúcar e sal.\n3. Adicione a mistura de fubá, mexendo sem parar.\n4. Cozinhe por 5 minutos até engrossar.\n5. Polvilhe canela antes de servir.",
+        calorias: 200,
+        tempo: "10 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "5g",
+        proteinas: "7g",
+        carboidratos: "35g",
+        dicas: "Adicione uma colher de manteiga para mais cremosidade."
+    },
+    {
+        nome: "Sanduíche de Queijo Quente na Frigideira",
+        ingredientes: [
+            "2 fatias de pão de forma",
+            "2 fatias de queijo mussarela",
+            "1 colher (sopa) de manteiga"
+        ],
+        preparo: "1. Monte o sanduíche com o queijo.\n2. Derreta manteiga em frigideira e doure o sanduíche dos dois lados.\n3. Sirva quente.",
+        calorias: 300,
+        tempo: "5 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "18g",
+        proteinas: "15g",
+        carboidratos: "25g",
+        dicas: "Adicione uma fatia de presunto ou tomate se desejar."
+    },
+    {
+        nome: "Iogurte com Mel e Granola Caseira",
+        ingredientes: [
+            "1 pote de iogurte natural",
+            "2 colheres (sopa) de granola",
+            "1 colher (sopa) de mel",
+            "1 banana em rodelas"
+        ],
+        preparo: "1. Em um pote, coloque o iogurte.\n2. Adicione banana, granola e mel por cima.",
+        calorias: 220,
+        tempo: "2 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "5g",
+        proteinas: "8g",
+        carboidratos: "40g",
+        dicas: "Use frutas da estação como morango ou manga."
+    },
+    {
+        nome: "Omelete de Queijo Simples",
+        ingredientes: [
+            "2 ovos",
+            "2 fatias de queijo mussarela",
+            "1 pitada de sal",
+            "1 colher (chá) de óleo"
+        ],
+        preparo: "1. Bata os ovos com sal.\n2. Aqueça o óleo em frigideira e despeje os ovos.\n3. Quando começar a firmar, coloque o queijo e dobre ao meio.\n4. Sirva quente.",
+        calorias: 280,
+        tempo: "10 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "20g",
+        proteinas: "18g",
+        carboidratos: "2g",
+        dicas: "Adicione orégano ou tomate picado para variar."
+    },
+    {
+        nome: "Pão com Ovo Frito",
+        ingredientes: [
+            "1 pão francês",
+            "1 ovo",
+            "1 colher (chá) de óleo",
+            "Sal a gosto"
+        ],
+        preparo: "1. Frite o ovo no óleo, mantendo a gema mole.\n2. Coloque dentro do pão aberto.\n3. Tempere com sal.",
+        calorias: 250,
+        tempo: "5 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "12g",
+        proteinas: "10g",
+        carboidratos: "30g",
+        dicas: "Adicione uma fatia de queijo ou presunto se desejar."
+    },
+    {
+        nome: "Vitamina de Banana com Leite",
+        ingredientes: [
+            "1 banana",
+            "1 xícara de leite",
+            "1 colher (sopa) de açúcar (opcional)"
+        ],
+        preparo: "1. Bata todos os ingredientes no liquidificador.\n2. Sirva gelado.",
+        calorias: 180,
+        tempo: "3 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "5g",
+        proteinas: "7g",
+        carboidratos: "30g",
+        dicas: "Adicione aveia para mais fibras."
+    },
+    {
+        nome: "Cuscuz com Ovo Cozido",
+        ingredientes: [
+            "3 colheres (sopa) de flocão de milho",
+            "1/2 xícara de água fervente",
+            "1 ovo cozido",
+            "1 colher (chá) de manteiga",
+            "Sal a gosto"
+        ],
+        preparo: "1. Hidrate o flocão com água fervente e tampe por 3 minutos.\n2. Solte com um garfo e misture a manteiga.\n3. Sirva com ovo cozido picado por cima.",
+        calorias: 200,
+        tempo: "10 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "10g",
+        proteinas: "8g",
+        carboidratos: "25g",
+        dicas: "Adicione queijo ralado ou salsinha picada."
+    },
+    {
+        nome: "Tapioca Recheada com Queijo",
+        ingredientes: [
+            "3 colheres (sopa) de goma de tapioca",
+            "2 fatias de queijo mussarela",
+            "1 pitada de sal"
+        ],
+        preparo: "1. Espalhe a goma em frigideira antiaderente quente.\n2. Quando firmar, vire e coloque o queijo.\n3. Dobre ao meio e sirva quente.",
+        calorias: 220,
+        tempo: "8 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "8g",
+        proteinas: "10g",
+        carboidratos: "30g",
+        dicas: "Adicione orégano ou tomate seco para variar."
+    },
+    {
+        nome: "Pão com Manteiga e Café com Leite",
+        ingredientes: [
+            "1 pão francês",
+            "1 colher (sopa) de manteiga",
+            "1 xícara de café coado",
+            "1/2 xícara de leite"
+        ],
+        preparo: "1. Passe manteiga no pão.\n2. Misture café com leite quente.\n3. Sirva juntos.",
+        calorias: 200,
+        tempo: "5 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "10g",
+        proteinas: "6g",
+        carboidratos: "25g",
+        dicas: "Adicione açúcar ou adoçante no café se preferir."
+    },
+    {
+        nome: "Overnight Oats de Banana",
+        ingredientes: [
+            "1/2 xícara de aveia",
+            "1/2 xícara de leite",
+            "1/2 banana amassada",
+            "1 colher (chá) de mel"
+        ],
+        preparo: "1. Misture todos ingredientes em um pote.\n2. Leve à geladeira por 4 horas ou durante a noite.\n3. Sirva frio.",
+        calorias: 250,
+        tempo: "5 minutos + repouso",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "5g",
+        proteinas: "8g",
+        carboidratos: "50g",
+        dicas: "Adicione canela ou nozes antes de servir."
+    },
+    {
+        nome: "Bolo de Caneca no Micro-ondas",
+        ingredientes: [
+            "4 colheres (sopa) de farinha de trigo",
+            "2 colheres (sopa) de açúcar",
+            "1 ovo",
+            "3 colheres (sopa) de leite",
+            "1 colher (chá) de fermento",
+            "1 colher (sopa) de óleo"
+        ],
+        preparo: "1. Misture todos ingredientes em uma caneca.\n2. Micro-ondas por 2 minutos em potência alta.\n3. Espere esfriar um pouco antes de consumir.",
+        calorias: 280,
+        tempo: "5 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "10g",
+        proteinas: "7g",
+        carboidratos: "40g",
+        dicas: "Adicione gotas de chocolate ou canela para variar."
+    },
+    {
+        nome: "Pão de Queijo de Liquidificador",
+        ingredientes: [
+            "1 xícara de polvilho doce",
+            "1/2 xícara de leite",
+            "1/4 xícara de óleo",
+            "1 ovo",
+            "1/2 xícara de queijo ralado",
+            "1 pitada de sal"
+        ],
+        preparo: "1. Bata todos ingredientes no liquidificador.\n2. Despeje em forminhas untadas.\n3. Asse em forno médio por 20 minutos.",
+        calorias: 90,
+        tempo: "30 minutos",
+        porcoes: "10 unidades",
+        dificuldade: "Fácil",
+        gordura: "5g",
+        proteinas: "3g",
+        carboidratos: "10g",
+        dicas: "Adicione orégano ou requeijão no centro para variar."
+    },
+    {
+        nome: "Panqueca Americana Simples",
+        ingredientes: [
+            "1 xícara de farinha de trigo",
+            "1 ovo",
+            "3/4 xícara de leite",
+            "1 colher (sopa) de açúcar",
+            "1 colher (chá) de fermento",
+            "1 pitada de sal"
+        ],
+        preparo: "1. Misture todos ingredientes até obter massa homogênea.\n2. Frite em frigideira antiaderente dos dois lados.\n3. Sirva com mel ou frutas.",
+        calorias: 120,
+        tempo: "20 minutos",
+        porcoes: "6 panquecas",
+        dificuldade: "Fácil",
+        gordura: "2g",
+        proteinas: "4g",
+        carboidratos: "20g",
+        dicas: "Adicione gotas de baunilha para sabor especial."
+    },
+    {
+        nome: "Torrada com Requeijão e Geleia",
+        ingredientes: [
+            "2 fatias de pão de forma",
+            "2 colheres (sopa) de requeijão",
+            "1 colher (sopa) de geleia de fruta"
+        ],
+        preparo: "1. Toste o pão.\n2. Passe requeijão e depois geleia.\n3. Sirva imediatamente.",
+        calorias: 180,
+        tempo: "5 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "5g",
+        proteinas: "6g",
+        carboidratos: "30g",
+        dicas: "Use geleia caseira ou de baixa caloria se preferir."
+    },
+    {
+        nome: "Café Preto com Biscoito de Polvilho",
+        ingredientes: [
+            "1 xícara de café coado",
+            "3 biscoitos de polvilho"
+        ],
+        preparo: "1. Prepare o café normalmente.\n2. Sirva com os biscoitos ao lado.",
+        calorias: 100,
+        tempo: "5 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "2g",
+        proteinas: "2g",
+        carboidratos: "20g",
+        dicas: "Adicione um pouco de leite se preferir café mais fraco."
     }
 ];
-
 const receitasAlmoco = [
     {
         nome: "Bowl de Quinoa com Frango Grelhado",
@@ -620,9 +910,314 @@ const receitasAlmoco = [
         proteinas: "15g",
         carboidratos: "45g",
         dicas: "Use feijão congelado para agilizar. Sirva com pão integral. Adicione bacon crocante na finalização."
+    },
+    {
+        nome: "Arroz com Ovo Frito e Banana da Terra",
+        ingredientes: [
+            "1 xícara de arroz cozido",
+            "1 ovo",
+            "3 rodelas de banana da terra",
+            "1 colher (sopa) de óleo",
+            "Sal a gosto"
+        ],
+        preparo: "1. Frite a banana da terra no óleo até dourar.\n2. Na mesma frigideira, frite o ovo.\n3. Sirva com arroz quente.",
+        calorias: 400,
+        tempo: "15 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "15g",
+        proteinas: "10g",
+        carboidratos: "60g",
+        dicas: "Adicione farofa ou vinagrete para acompanhar."
+    },
+    {
+        nome: "Macarrão com Atum e Milho",
+        ingredientes: [
+            "1 xícara de macarrão cozido",
+            "1 lata de atum em água",
+            "1/2 xícara de milho",
+            "1 colher (sopa) de maionese",
+            "Salsinha picada"
+        ],
+        preparo: "1. Misture todos ingredientes em uma tigela.\n2. Ajuste o sal e sirva frio.",
+        calorias: 380,
+        tempo: "15 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "12g",
+        proteinas: "25g",
+        carboidratos: "45g",
+        dicas: "Adicione cenoura ralada para mais nutrientes."
+    },
+    {
+        nome: "Feijão Tropeiro Simplificado",
+        ingredientes: [
+            "2 xícaras de feijão cozido",
+            "100g de bacon em cubos",
+            "1 ovo",
+            "1 xícara de farinha de mandioca",
+            "Cebolinha picada"
+        ],
+        preparo: "1. Frite o bacon até dourar.\n2. Acrescente o ovo e mexa até cozinhar.\n3. Junte o feijão e a farinha, mexendo bem.\n4. Finalize com cebolinha.",
+        calorias: 450,
+        tempo: "20 minutos",
+        porcoes: "2 porções",
+        dificuldade: "Fácil",
+        gordura: "20g",
+        proteinas: "20g",
+        carboidratos: "50g",
+        dicas: "Adicione couve refogada se tiver disponível."
+    },
+    {
+        nome: "Frango Grelhado com Arroz e Salada",
+        ingredientes: [
+            "1 filé de frango",
+            "1 xícara de arroz cozido",
+            "1 tomate picado",
+            "1/2 cebola picada",
+            "Suco de limão",
+            "Sal e pimenta"
+        ],
+        preparo: "1. Tempere o frango com sal e pimenta e grelhe.\n2. Misture tomate e cebola com limão para a salada.\n3. Sirva com arroz.",
+        calorias: 400,
+        tempo: "25 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "10g",
+        proteinas: "35g",
+        carboidratos: "45g",
+        dicas: "Adicione pepino ou alface à salada."
+    },
+    {
+        nome: "Omelete de Forno com Batata",
+        ingredientes: [
+            "3 ovos",
+            "1 batata cozida em cubos",
+            "1/4 de cebola picada",
+            "1 colher (sopa) de queijo ralado",
+            "Sal e pimenta"
+        ],
+        preparo: "1. Bata os ovos com sal e pimenta.\n2. Misture com batata e cebola.\n3. Despeje em forma untada e polvilhe queijo.\n4. Asse por 20 minutos a 180°C.",
+        calorias: 320,
+        tempo: "30 minutos",
+        porcoes: "2 porções",
+        dificuldade: "Fácil",
+        gordura: "15g",
+        proteinas: "15g",
+        carboidratos: "30g",
+        dicas: "Adicione tomate seco ou azeitonas se desejar."
+    },
+    {
+        nome: "Lasanha de Pão de Forma",
+        ingredientes: [
+            "6 fatias de pão de forma",
+            "1 xícara de molho de tomate",
+            "1 xícara de queijo mussarela ralado",
+            "1/2 xícara de presunto picado",
+            "Orégano a gosto"
+        ],
+        preparo: "1. Em um refratário, alterne camadas de pão, molho, presunto e queijo.\n2. Finalize com queijo e orégano.\n3. Asse por 20 minutos a 180°C.",
+        calorias: 350,
+        tempo: "30 minutos",
+        porcoes: "3 porções",
+        dificuldade: "Fácil",
+        gordura: "15g",
+        proteinas: "18g",
+        carboidratos: "35g",
+        dicas: "Adicione frango desfiado ou atum para variar."
+    },
+    {
+        nome: "Sopa de Legumes com Macarrão",
+        ingredientes: [
+            "1 litro de água",
+            "2 batatas em cubos",
+            "1 cenoura em rodelas",
+            "1/2 xícara de macarrão",
+            "1 colher (sopa) de óleo",
+            "Sal e cebolinha"
+        ],
+        preparo: "1. Cozinhe os legumes na água com sal.\n2. Quando estiverem macios, adicione o macarrão.\n3. Cozinhe até o macarrão ficar al dente.\n4. Finalize com cebolinha.",
+        calorias: 200,
+        tempo: "25 minutos",
+        porcoes: "3 porções",
+        dificuldade: "Fácil",
+        gordura: "5g",
+        proteinas: "5g",
+        carboidratos: "40g",
+        dicas: "Adicione frango desfiado para mais proteína."
+    },
+    {
+        nome: "Bife Acebolado com Purê",
+        ingredientes: [
+            "1 bife de carne",
+            "1 cebola em rodelas",
+            "2 batatas cozidas",
+            "1 colher (sopa) de manteiga",
+            "Sal e pimenta"
+        ],
+        preparo: "1. Tempere e frite o bife, reserve.\n2. Na mesma frigideira, refogue a cebola.\n3. Amasse as batatas com manteiga para o purê.\n4. Sirva o bife com cebola e purê.",
+        calorias: 450,
+        tempo: "30 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "20g",
+        proteinas: "30g",
+        carboidratos: "35g",
+        dicas: "Adicione alho ao purê para mais sabor."
+    },
+    {
+        nome: "Torta de Frango de Liquidificador",
+        ingredientes: [
+            "1 xícara de frango cozido desfiado",
+            "1 xícara de leite",
+            "1 xícara de farinha de trigo",
+            "1 ovo",
+            "1 colher (sopa) de fermento",
+            "Sal e temperos"
+        ],
+        preparo: "1. Bata no liquidificador o leite, farinha, ovo e fermento.\n2. Em uma forma, coloque o frango e despeje a massa.\n3. Asse por 30 minutos a 180°C.",
+        calorias: 300,
+        tempo: "45 minutos",
+        porcoes: "4 porções",
+        dificuldade: "Fácil",
+        gordura: "10g",
+        proteinas: "20g",
+        carboidratos: "35g",
+        dicas: "Adicione milho ou ervilha ao recheio."
+    },
+    {
+        nome: "Arroz com Lentilha",
+        ingredientes: [
+            "1 xícara de arroz",
+            "1/2 xícara de lentilha",
+            "1/2 cebola picada",
+            "1 dente de alho",
+            "1 colher (sopa) de óleo",
+            "Sal a gosto"
+        ],
+        preparo: "1. Refogue cebola e alho no óleo.\n2. Acrescente arroz e lentilha, mexendo bem.\n3. Adicione água e cozinhe como arroz normal.",
+        calorias: 350,
+        tempo: "30 minutos",
+        porcoes: "2 porções",
+        dificuldade: "Fácil",
+        gordura: "8g",
+        proteinas: "15g",
+        carboidratos: "60g",
+        dicas: "Adicione cenoura picada para mais nutrientes."
+    },
+    {
+        nome: "Panqueca de Carne Moída",
+        ingredientes: [
+            "1 xícara de farinha de trigo",
+            "1 ovo",
+            "1 xícara de leite",
+            "200g de carne moída refogada",
+            "1 xícara de molho de tomate"
+        ],
+        preparo: "1. Misture farinha, ovo e leite para fazer as panquecas.\n2. Recheie com carne e enrole.\n3. Cubra com molho e sirva.",
+        calorias: 380,
+        tempo: "40 minutos",
+        porcoes: "3 porções",
+        dificuldade: "Médio",
+        gordura: "15g",
+        proteinas: "20g",
+        carboidratos: "45g",
+        dicas: "Adicione queijo por cima antes de servir."
+    },
+    {
+        nome: "Escondidinho de Carne Seca",
+        ingredientes: [
+            "2 xícaras de purê de batata",
+            "1 xícara de carne seca desfiada",
+            "1/2 cebola picada",
+            "Queijo ralado para gratinar"
+        ],
+        preparo: "1. Refogue a carne seca com cebola.\n2. Em um refratário, faça camadas de purê e carne.\n3. Finalize com queijo e leve ao forno por 20 minutos.",
+        calorias: 400,
+        tempo: "35 minutos",
+        porcoes: "3 porções",
+        dificuldade: "Fácil",
+        gordura: "15g",
+        proteinas: "25g",
+        carboidratos: "40g",
+        dicas: "Use mandioquinha no lugar da batata para variar."
+    },
+    {
+        nome: "Macarrão Alho e Óleo",
+        ingredientes: [
+            "1 xícara de macarrão cozido",
+            "3 dentes de alho picados",
+            "2 colheres (sopa) de azeite",
+            "Salsinha e queijo ralado"
+        ],
+        preparo: "1. Doure o alho no azeite.\n2. Misture com o macarrão cozido.\n3. Finalize com salsinha e queijo.",
+        calorias: 350,
+        tempo: "15 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "15g",
+        proteinas: "10g",
+        carboidratos: "45g",
+        dicas: "Adicione pimenta calabresa para um toque picante."
+    },
+    {
+        nome: "Filé de Peixe Grelhado com Legumes",
+        ingredientes: [
+            "1 filé de peixe",
+            "1 batata cozida",
+            "1 cenoura cozida",
+            "Suco de limão",
+            "Sal e pimenta"
+        ],
+        preparo: "1. Tempere o peixe com limão, sal e pimenta.\n2. Grelhe por 5 minutos de cada lado.\n3. Sirva com os legumes cozidos.",
+        calorias: 300,
+        tempo: "20 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "8g",
+        proteinas: "30g",
+        carboidratos: "30g",
+        dicas: "Adicione brócolis cozido no vapor."
+    },
+    {
+        nome: "Frango Xadrez Simplificado",
+        ingredientes: [
+            "1 filé de frango em cubos",
+            "1/2 pimentão em tiras",
+            "1 cebola em cubos",
+            "1 colher (sopa) de shoyu",
+            "1 colher (sopa) de óleo"
+        ],
+        preparo: "1. Doure o frango no óleo.\n2. Adicione os legumes e refogue.\n3. Finalize com shoyu e sirva com arroz.",
+        calorias: 350,
+        tempo: "25 minutos",
+        porcoes: "2 porções",
+        dificuldade: "Fácil",
+        gordura: "12g",
+        proteinas: "30g",
+        carboidratos: "25g",
+        dicas: "Adicione castanha de caju se tiver disponível."
+    },
+    {
+        nome: "Arroz com Ovo e Banana",
+        ingredientes: [
+            "1 xícara de arroz cozido",
+            "1 ovo",
+            "1 banana nanica",
+            "1 colher (sopa) de óleo",
+            "Sal a gosto"
+        ],
+        preparo: "1. Frite o ovo no óleo.\n2. Misture com arroz e banana picada.\n3. Ajuste o sal e sirva.",
+        calorias: 400,
+        tempo: "10 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "15g",
+        proteinas: "10g",
+        carboidratos: "60g",
+        dicas: "Adicione um pouco de açúcar se preferir doce."
     }
 ];
-
 const receitasTarde = [
     {
         nome: "Cookies de Aveia e Passas Sem Açúcar",
@@ -910,6 +1505,295 @@ const receitasTarde = [
         proteinas: "15g",
         carboidratos: "25g",
         dicas: "Adicione tomate seco picado. Use pão de centeio para sabor intenso. Sirva imediatamente."
+    },
+    {
+        nome: "Sanduíche Natural de Frango",
+        ingredientes: [
+            "2 fatias de pão integral",
+            "1/2 xícara de frango desfiado",
+            "1 colher (sopa) de maionese light",
+            "Folhas de alface",
+            "1 tomate em rodelas"
+        ],
+        preparo: "1. Misture o frango com maionese.\n2. Monte o sanduíche com alface e tomate.\n3. Corte ao meio e sirva.",
+        calorias: 300,
+        tempo: "10 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "10g",
+        proteinas: "25g",
+        carboidratos: "30g",
+        dicas: "Adicione cenoura ralada para mais nutrientes."
+    },
+    {
+        nome: "Bolinho de Chuva",
+        ingredientes: [
+            "1 xícara de farinha de trigo",
+            "1 ovo",
+            "1/2 xícara de leite",
+            "1 colher (sopa) de açúcar",
+            "1 colher (chá) de fermento",
+            "Óleo para fritar",
+            "Canela e açúcar para polvilhar"
+        ],
+        preparo: "1. Misture todos ingredientes até obter massa homogênea.\n2. Frite colheradas em óleo quente.\n3. Escorra e polvilhe com açúcar e canela.",
+        calorias: 120,
+        tempo: "20 minutos",
+        porcoes: "10 unidades",
+        dificuldade: "Fácil",
+        gordura: "5g",
+        proteinas: "3g",
+        carboidratos: "20g",
+        dicas: "Sirva quente com café ou suco."
+    },
+    {
+        nome: "Pão com Manteiga e Café",
+        ingredientes: [
+            "1 pão francês",
+            "1 colher (sopa) de manteiga",
+            "1 xícara de café coado"
+        ],
+        preparo: "1. Passe manteiga no pão.\n2. Sirva com café quente.",
+        calorias: 200,
+        tempo: "5 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "10g",
+        proteinas: "5g",
+        carboidratos: "25g",
+        dicas: "Adicione queijo se desejar mais proteína."
+    },
+    {
+        nome: "Vitamina de Mamão com Leite",
+        ingredientes: [
+            "1 xícara de mamão picado",
+            "1 xícara de leite",
+            "1 colher (sopa) de açúcar (opcional)"
+        ],
+        preparo: "1. Bata todos ingredientes no liquidificador.\n2. Sirva gelado.",
+        calorias: 150,
+        tempo: "5 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "5g",
+        proteinas: "6g",
+        carboidratos: "25g",
+        dicas: "Adicione aveia para mais fibras."
+    },
+    {
+        nome: "Torrada com Requeijão",
+        ingredientes: [
+            "2 fatias de pão de forma",
+            "2 colheres (sopa) de requeijão"
+        ],
+        preparo: "1. Toste o pão.\n2. Passe requeijão e sirva.",
+        calorias: 180,
+        tempo: "5 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "8g",
+        proteinas: "7g",
+        carboidratos: "25g",
+        dicas: "Adicione orégano ou azeite para variar."
+    },
+    {
+        nome: "Pipoca Doce",
+        ingredientes: [
+            "1/4 xícara de milho para pipoca",
+            "1 colher (sopa) de açúcar",
+            "1 colher (sopa) de óleo",
+            "Sal a gosto"
+        ],
+        preparo: "1. Aqueça o óleo em panela e adicione milho e açúcar.\n2. Tampe e agite até parar de estourar.\n3. Polvilhe sal e sirva.",
+        calorias: 150,
+        tempo: "10 minutos",
+        porcoes: "2 porções",
+        dificuldade: "Fácil",
+        gordura: "5g",
+        proteinas: "3g",
+        carboidratos: "30g",
+        dicas: "Adicione canela em pó para variar."
+    },
+    {
+        nome: "Biscoito Caseiro de Polvilho",
+        ingredientes: [
+            "2 xícaras de polvilho azedo",
+            "1/2 xícara de água",
+            "1/2 xícara de óleo",
+            "1 ovo",
+            "Sal a gosto"
+        ],
+        preparo: "1. Misture todos ingredientes até formar massa homogênea.\n2. Faça bolinhas e achate com garfo.\n3. Asse em forno médio por 20 minutos.",
+        calorias: 80,
+        tempo: "30 minutos",
+        porcoes: "20 unidades",
+        dificuldade: "Fácil",
+        gordura: "4g",
+        proteinas: "2g",
+        carboidratos: "10g",
+        dicas: "Adicione queijo ralado para biscoito salgado."
+    },
+    {
+        nome: "Pudim de Leite Condensado",
+        ingredientes: [
+            "1 lata de leite condensado",
+            "1 medida (lata) de leite",
+            "3 ovos",
+            "1 xícara de açúcar para calda"
+        ],
+        preparo: "1. Derreta o açúcar para fazer calda e forre forma.\n2. Bata os demais ingredientes e despeje na forma.\n3. Asse em banho-maria por 1 hora.",
+        calorias: 250,
+        tempo: "70 minutos",
+        porcoes: "8 porções",
+        dificuldade: "Médio",
+        gordura: "10g",
+        proteinas: "8g",
+        carboidratos: "35g",
+        dicas: "Deixe esfriar completamente antes de desenformar."
+    },
+    {
+        nome: "Bolo de Laranja",
+        ingredientes: [
+            "2 xícaras de farinha de trigo",
+            "1 xícara de açúcar",
+            "1 xícara de suco de laranja",
+            "1/2 xícara de óleo",
+            "3 ovos",
+            "1 colher (sopa) de fermento"
+        ],
+        preparo: "1. Bata todos ingredientes no liquidificador.\n2. Despeje em forma untada.\n3. Asse por 40 minutos em forno médio.",
+        calorias: 200,
+        tempo: "50 minutos",
+        porcoes: "10 fatias",
+        dificuldade: "Fácil",
+        gordura: "8g",
+        proteinas: "4g",
+        carboidratos: "30g",
+        dicas: "Polvilhe açúcar de confeiteiro por cima."
+    },
+    {
+        nome: "Tapioca com Coco",
+        ingredientes: [
+            "3 colheres (sopa) de goma de tapioca",
+            "1 colher (sopa) de coco ralado",
+            "1 colher (chá) de açúcar"
+        ],
+        preparo: "1. Misture todos ingredientes.\n2. Espalhe em frigideira quente.\n3. Vire quando firmar e sirva.",
+        calorias: 150,
+        tempo: "5 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "2g",
+        proteinas: "1g",
+        carboidratos: "35g",
+        dicas: "Adicione banana em rodelas para rechear."
+    },
+    {
+        nome: "Cuscuz com Manteiga",
+        ingredientes: [
+            "3 colheres (sopa) de flocão de milho",
+            "1/2 xícara de água fervente",
+            "1 colher (chá) de manteiga",
+            "Sal a gosto"
+        ],
+        preparo: "1. Hidrate o flocão com água e tampe por 3 minutos.\n2. Solte com garfo e misture manteiga.\n3. Ajuste o sal e sirva.",
+        calorias: 120,
+        tempo: "5 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "5g",
+        proteinas: "3g",
+        carboidratos: "20g",
+        dicas: "Adicione queijo ralado se desejar."
+    },
+    {
+        nome: "Pão de Queijo de Micro-ondas",
+        ingredientes: [
+            "2 colheres (sopa) de polvilho doce",
+            "1 colher (sopa) de queijo ralado",
+            "1 colher (sopa) de leite",
+            "1 colher (chá) de óleo",
+            "1 pitada de sal"
+        ],
+        preparo: "1. Misture todos ingredientes em uma caneca.\n2. Micro-ondas por 1 minuto.\n3. Deixe esfriar um pouco e consuma.",
+        calorias: 100,
+        tempo: "5 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "5g",
+        proteinas: "3g",
+        carboidratos: "15g",
+        dicas: "Adicione orégano ou requeijão no centro."
+    },
+    {
+        nome: "Mingau de Milho Verde",
+        ingredientes: [
+            "1 lata de milho verde",
+            "1 xícara de leite",
+            "2 colheres (sopa) de açúcar",
+            "1 colher (sopa) de amido de milho"
+        ],
+        preparo: "1. Bata o milho no liquidificador com leite.\n2. Leve ao fogo com açúcar e amido, mexendo até engrossar.\n3. Sirva quente ou frio.",
+        calorias: 180,
+        tempo: "15 minutos",
+        porcoes: "2 porções",
+        dificuldade: "Fácil",
+        gordura: "5g",
+        proteinas: "5g",
+        carboidratos: "35g",
+        dicas: "Polvilhe canela antes de servir."
+    },
+    {
+        nome: "Sanduíche de Queijo Quente",
+        ingredientes: [
+            "2 fatias de pão de forma",
+            "2 fatias de queijo mussarela",
+            "1 colher (sopa) de manteiga"
+        ],
+        preparo: "1. Monte o sanduíche com queijo.\n2. Passe manteiga e doure na frigideira.\n3. Sirva quente.",
+        calorias: 300,
+        tempo: "10 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "15g",
+        proteinas: "12g",
+        carboidratos: "30g",
+        dicas: "Adicione presunto ou tomate se desejar."
+    },
+    {
+        nome: "Brigadeiro de Colher",
+        ingredientes: [
+            "1 lata de leite condensado",
+            "2 colheres (sopa) de chocolate em pó",
+            "1 colher (sopa) de manteiga"
+        ],
+        preparo: "1. Misture todos ingredientes em panela.\n2. Cozinhe em fogo baixo até desgrudar do fundo.\n3. Sirva em xícaras.",
+        calorias: 200,
+        tempo: "15 minutos",
+        porcoes: "4 porções",
+        dificuldade: "Fácil",
+        gordura: "8g",
+        proteinas: "5g",
+        carboidratos: "35g",
+        dicas: "Adicione granulado ou coco ralado por cima."
+    },
+    {
+        nome: "Canjica Doce",
+        ingredientes: [
+            "1 xícara de canjica",
+            "1 litro de leite",
+            "1/2 xícara de açúcar",
+            "Canela em pó"
+        ],
+        preparo: "1. Cozinhe a canjica até ficar macia.\n2. Adicione leite e açúcar, cozinhando até engrossar.\n3. Polvilhe canela e sirva quente.",
+        calorias: 250,
+        tempo: "40 minutos",
+        porcoes: "4 porções",
+        dificuldade: "Fácil",
+        gordura: "8g",
+        proteinas: "8g",
+        carboidratos: "40g",
+        dicas: "Adicione leite condensado para versão mais cremosa."
     }
 ];
 
@@ -1239,6 +2123,306 @@ const receitasNoite = [
         proteinas: "40g",
         carboidratos: "8g",
         dicas: "Adicione cogumelos salteados. Sirva com arroz basmati. Rendimento dobra facilmente."
+    },
+    {
+        nome: "Omelete de Queijo com Salada",
+        ingredientes: [
+            "2 ovos",
+            "2 fatias de queijo mussarela",
+            "1 xícara de alface picada",
+            "1 tomate em rodelas",
+            "1 colher (sopa) de óleo",
+            "Sal a gosto"
+        ],
+        preparo: "1. Bata os ovos com sal.\n2. Frite em frigideira, adicionando queijo no centro.\n3. Dobre ao meio e sirve com salada.",
+        calorias: 300,
+        tempo: "15 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "20g",
+        proteinas: "18g",
+        carboidratos: "10g",
+        dicas: "Adicione cenoura ralada à salada."
+    },
+    {
+        nome: "Macarrão com Atum e Maionese",
+        ingredientes: [
+            "1 xícara de macarrão cozido",
+            "1 lata de atum em água",
+            "2 colheres (sopa) de maionese",
+            "Salsinha picada"
+        ],
+        preparo: "1. Misture todos ingredientes em uma tigela.\n2. Ajuste o sal e sirva frio.",
+        calorias: 350,
+        tempo: "10 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "15g",
+        proteinas: "20g",
+        carboidratos: "35g",
+        dicas: "Adicione milho ou ervilha se desejar."
+    },
+    {
+        nome: "Sanduíche de Frango Grelhado",
+        ingredientes: [
+            "2 fatias de pão integral",
+            "1 filé de frango grelhado",
+            "Folhas de alface",
+            "1 colher (sopa) de maionese"
+        ],
+        preparo: "1. Monte o sanduíche com todos ingredientes.\n2. Corte ao meio e sirva.",
+        calorias: 400,
+        tempo: "15 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "15g",
+        proteinas: "30g",
+        carboidratos: "35g",
+        dicas: "Adicione tomate ou pepino para mais frescor."
+    },
+    {
+        nome: "Sopa de Batata com Frango",
+        ingredientes: [
+            "2 batatas médias em cubos",
+            "1/2 xícara de frango desfiado",
+            "1 litro de água",
+            "Sal e cebolinha"
+        ],
+        preparo: "1. Cozinhe as batatas na água com sal.\n2. Quando estiverem macias, adicione frango.\n3. Finalize com cebolinha.",
+        calorias: 250,
+        tempo: "25 minutos",
+        porcoes: "2 porções",
+        dificuldade: "Fácil",
+        gordura: "5g",
+        proteinas: "20g",
+        carboidratos: "35g",
+        dicas: "Adicione cenoura ou abobrinha para mais nutrientes."
+    },
+    {
+        nome: "Torta de Liquidificador de Frango",
+        ingredientes: [
+            "1 xícara de frango desfiado",
+            "1 xícara de leite",
+            "1 xícara de farinha de trigo",
+            "1 ovo",
+            "1 colher (sopa) de fermento",
+            "Sal e temperos"
+        ],
+        preparo: "1. Bata no liquidificador leite, farinha, ovo e fermento.\n2. Em forma untada, coloque frango e despeje massa.\n3. Asse por 30 minutos a 180°C.",
+        calorias: 300,
+        tempo: "45 minutos",
+        porcoes: "4 porções",
+        dificuldade: "Fácil",
+        gordura: "10g",
+        proteinas: "20g",
+        carboidratos: "35g",
+        dicas: "Adicione milho ou ervilha ao recheio."
+    },
+    {
+        nome: "Arroz com Ovo Mexido",
+        ingredientes: [
+            "1 xícara de arroz cozido",
+            "2 ovos",
+            "1 colher (sopa) de óleo",
+            "Sal e cebolinha"
+        ],
+        preparo: "1. Mexa os ovos com sal e cozinhe em frigideira.\n2. Misture com arroz e finalize com cebolinha.",
+        calorias: 350,
+        tempo: "10 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "15g",
+        proteinas: "12g",
+        carboidratos: "45g",
+        dicas: "Adicione queijo ralado por cima."
+    },
+    {
+        nome: "Panqueca de Carne Moída",
+        ingredientes: [
+            "1 xícara de farinha de trigo",
+            "1 ovo",
+            "1 xícara de leite",
+            "200g de carne moída refogada",
+            "1 xícara de molho de tomate"
+        ],
+        preparo: "1. Faça as panquecas misturando farinha, ovo e leite.\n2. Recheie com carne e enrole.\n3. Cubra com molho e sirva.",
+        calorias: 380,
+        tempo: "40 minutos",
+        porcoes: "3 porções",
+        dificuldade: "Médio",
+        gordura: "15g",
+        proteinas: "20g",
+        carboidratos: "45g",
+        dicas: "Adicione queijo por cima antes de servir."
+    },
+    {
+        nome: "Frango Grelhado com Purê",
+        ingredientes: [
+            "1 filé de frango",
+            "2 batatas cozidas",
+            "1 colher (sopa) de manteiga",
+            "Sal e pimenta"
+        ],
+        preparo: "1. Tempere e grelhe o frango.\n2. Amasse as batatas com manteiga para o purê.\n3. Sirva juntos.",
+        calorias: 400,
+        tempo: "30 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "15g",
+        proteinas: "30g",
+        carboidratos: "35g",
+        dicas: "Adicione brócolis cozido no vapor."
+    },
+    {
+        nome: "Lasanha de Pão de Forma",
+        ingredientes: [
+            "6 fatias de pão de forma",
+            "1 xícara de molho de tomate",
+            "1 xícara de queijo mussarela ralado",
+            "1/2 xícara de presunto picado",
+            "Orégano a gosto"
+        ],
+        preparo: "1. Em um refratário, alterne camadas de pão, molho, presunto e queijo.\n2. Finalize com queijo e orégano.\n3. Asse por 20 minutos a 180°C.",
+        calorias: 350,
+        tempo: "30 minutos",
+        porcoes: "3 porções",
+        dificuldade: "Fácil",
+        gordura: "15g",
+        proteinas: "18g",
+        carboidratos: "35g",
+        dicas: "Adicione frango desfiado ou atum para variar."
+    },
+    {
+        nome: "Ovo Cozido com Torrada",
+        ingredientes: [
+            "2 ovos cozidos",
+            "2 fatias de pão integral",
+            "1 colher (sopa) de manteiga",
+            "Sal a gosto"
+        ],
+        preparo: "1. Toste o pão e passe manteiga.\n2. Sirva com ovos cozidos e sal.",
+        calorias: 300,
+        tempo: "10 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "15g",
+        proteinas: "15g",
+        carboidratos: "30g",
+        dicas: "Adicione tomate ou pepino para acompanhar."
+    },
+    {
+        nome: "Sopa de Legumes com Macarrão",
+        ingredientes: [
+            "1 litro de água",
+            "2 batatas em cubos",
+            "1 cenoura em rodelas",
+            "1/2 xícara de macarrão",
+            "1 colher (sopa) de óleo",
+            "Sal e cebolinha"
+        ],
+        preparo: "1. Cozinhe os legumes na água com sal.\n2. Quando estiverem macios, adicione o macarrão.\n3. Cozinhe até o macarrão ficar al dente.\n4. Finalize com cebolinha.",
+        calorias: 200,
+        tempo: "25 minutos",
+        porcoes: "3 porções",
+        dificuldade: "Fácil",
+        gordura: "5g",
+        proteinas: "5g",
+        carboidratos: "40g",
+        dicas: "Adicione frango desfiado para mais proteína."
+    },
+    {
+        nome: "Torta de Atum Simples",
+        ingredientes: [
+            "1 lata de atum",
+            "2 ovos",
+            "1/2 xícara de leite",
+            "1/2 xícara de farinha de trigo",
+            "1 colher (sopa) de fermento",
+            "Sal e temperos"
+        ],
+        preparo: "1. Misture todos ingredientes em uma tigela.\n2. Despeje em forma untada.\n3. Asse por 30 minutos a 180°C.",
+        calorias: 250,
+        tempo: "40 minutos",
+        porcoes: "4 porções",
+        dificuldade: "Fácil",
+        gordura: "10g",
+        proteinas: "20g",
+        carboidratos: "25g",
+        dicas: "Adicione milho ou ervilha para variar."
+    },
+    {
+        nome: "Arroz com Lentilha",
+        ingredientes: [
+            "1 xícara de arroz",
+            "1/2 xícara de lentilha",
+            "1/2 cebola picada",
+            "1 dente de alho",
+            "1 colher (sopa) de óleo",
+            "Sal a gosto"
+        ],
+        preparo: "1. Refogue cebola e alho no óleo.\n2. Acrescente arroz e lentilha, mexendo bem.\n3. Adicione água e cozinhe como arroz normal.",
+        calorias: 350,
+        tempo: "30 minutos",
+        porcoes: "2 porções",
+        dificuldade: "Fácil",
+        gordura: "8g",
+        proteinas: "15g",
+        carboidratos: "60g",
+        dicas: "Adicione cenoura picada para mais nutrientes."
+    },
+    {
+        nome: "Omelete de Forno com Batata",
+        ingredientes: [
+            "3 ovos",
+            "1 batata cozida em cubos",
+            "1/4 de cebola picada",
+            "1 colher (sopa) de queijo ralado",
+            "Sal e pimenta"
+        ],
+        preparo: "1. Bata os ovos com sal e pimenta.\n2. Misture com batata e cebola.\n3. Despeje em forma untada e polvilhe queijo.\n4. Asse por 20 minutos a 180°C.",
+        calorias: 320,
+        tempo: "30 minutos",
+        porcoes: "2 porções",
+        dificuldade: "Fácil",
+        gordura: "15g",
+        proteinas: "15g",
+        carboidratos: "30g",
+        dicas: "Adicione tomate seco ou azeitonas se desejar."
+    },
+    {
+        nome: "Sanduíche de Queijo Quente",
+        ingredientes: [
+            "2 fatias de pão de forma",
+            "2 fatias de queijo mussarela",
+            "1 colher (sopa) de manteiga"
+        ],
+        preparo: "1. Monte o sanduíche com queijo.\n2. Passe manteiga e doure na frigideira.\n3. Sirva quente.",
+        calorias: 300,
+        tempo: "10 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "15g",
+        proteinas: "12g",
+        carboidratos: "30g",
+        dicas: "Adicione presunto ou tomate se desejar."
+    },
+    {
+        nome: "Macarrão Alho e Óleo",
+        ingredientes: [
+            "1 xícara de macarrão cozido",
+            "3 dentes de alho picados",
+            "2 colheres (sopa) de azeite",
+            "Salsinha e queijo ralado"
+        ],
+        preparo: "1. Doure o alho no azeite.\n2. Misture com o macarrão cozido.\n3. Finalize com salsinha e queijo.",
+        calorias: 350,
+        tempo: "15 minutos",
+        porcoes: "1 porção",
+        dificuldade: "Fácil",
+        gordura: "15g",
+        proteinas: "10g",
+        carboidratos: "45g",
+        dicas: "Adicione pimenta calabresa para um toque picante."
     }
 ];
 const chatContainer = document.getElementById('chatContainer');
