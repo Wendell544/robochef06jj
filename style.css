@@ -43,8 +43,8 @@ body {
 }
 
 header {
-    background-color: var(--rosa);
-    color: var(--branco);
+    background-color: var(--laranja); /* laranja claro já definido no :root */
+    color: #000000; /* texto preto */
     padding: 15px 20px;
     position: relative;
     display: flex;
