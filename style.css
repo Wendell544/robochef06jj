@@ -1,13 +1,12 @@
 :root {
-    --laranja: #F7BA65;
-    --cinza: #F5F5F5;
-    --branco: #FFFFFF;
-    --laranja: #F7BA65;
-    --cinza-escuro: #333333;
-    --cinza-chat: #F0F0F0;
-    --sombra: rgba(0, 0, 0, 0.1);
-    --sombra-chat: rgba(0, 0, 0, 0.08);
-    --cor-receita: #FFEDE0;
+  --laranja: #FAD4A0;          /* Laranja claro mais suave */
+  --cinza: #F2F2F2;            /* Cinza mais suave e elegante */
+  --branco: #FFFFFF;
+  --cinza-escuro: #2F2F2F;     /* Cinza escuro mais equilibrado */
+  --cinza-chat: #F7F7F7;       /* Tom mais claro para áreas de chat */
+  --sombra: rgba(0, 0, 0, 0.06);
+  --sombra-chat: rgba(0, 0, 0, 0.04);
+  --cor-receita: #FFF4E8;      /* Cor de fundo suave para blocos de receita */
 }
 
 * {
