@@ -1,12 +1,13 @@
 :root {
-  --laranja: #FAD4A0;          /* Laranja claro mais suave */
-  --cinza: #F2F2F2;            /* Cinza mais suave e elegante */
+  --laranja: #FAD4A0;
+  --cinza: #F2F2F2;
   --branco: #FFFFFF;
-  --cinza-escuro: #2F2F2F;     /* Cinza escuro mais equilibrado */
-  --cinza-chat: #F7F7F7;       /* Tom mais claro para áreas de chat */
+  --cinza-escuro: #2F2F2F;
+  --cinza-chat: #F7F7F7;
   --sombra: rgba(0, 0, 0, 0.06);
   --sombra-chat: rgba(0, 0, 0, 0.04);
-  --cor-receita: #FFF4E8;      /* Cor de fundo suave para blocos de receita */
+  --cor-receita: #FFF4E8;
+  --texto-escuro: #4A2B00;
 }
 
 * {
@@ -255,13 +256,12 @@ li {
 }
 
 footer {
-    text-align: center;
-    padding: 15px;
-    font-size: 0.8rem;
-    color: var(--cinza-escuro);
-    opacity: 0.8;
-    background-color: var(--laranja);
-    margin-top: auto;
+  background-color: var(--laranja);
+  color: #4A2B00; /* Um marrom escuro para contraste agradável */
+  text-align: center;
+  padding: 12px 0;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 /* Animações */
