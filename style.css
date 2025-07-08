@@ -1,14 +1,15 @@
 :root {
-  --laranja: #F9CFA3;             /* Laranja claro neutro */
-  --laranja-hover: #FFD9B3;       /* Hover suave */
+  --primario: #F5B971;        /* Laranja suave/amendoado */
+  --secundario: #B6C9D3;      /* Azul acinzentado calmante */
+  --fundo: #FFFFFF;
   --cinza: #F2F2F2;
-  --branco: #FFFFFF;
   --cinza-escuro: #2F2F2F;
   --cinza-chat: #F7F7F7;
   --sombra: rgba(0, 0, 0, 0.06);
   --sombra-chat: rgba(0, 0, 0, 0.04);
-  --cor-receita: #FFF4E8;
-  --texto-escuro: #3E2C1C;        /* Marrom escuro elegante */
+  --cor-receita: #FFF8F1;     /* Bege claro, suave e leve */
+  --texto-escuro: #3A2D1C;    /* Marrom escuro neutro */
+  --destaque: #7F9C96;        /* Verde neutro suave */
 }
 
 * {
