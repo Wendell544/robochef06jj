@@ -1,15 +1,15 @@
 :root {
-  --primario: #F5B971;        /* Laranja suave/amendoado */
-  --secundario: #B6C9D3;      /* Azul acinzentado calmante */
+  --primario: #F5B971;
+  --secundario: #B6C9D3;
   --fundo: #FFFFFF;
   --cinza: #F2F2F2;
   --cinza-escuro: #2F2F2F;
   --cinza-chat: #F7F7F7;
   --sombra: rgba(0, 0, 0, 0.06);
   --sombra-chat: rgba(0, 0, 0, 0.04);
-  --cor-receita: #FFF8F1;     /* Bege claro, suave e leve */
-  --texto-escuro: #3A2D1C;    /* Marrom escuro neutro */
-  --destaque: #7F9C96;        /* Verde neutro suave */
+  --cor-receita: #FFF8F1;
+  --texto-escuro: #3A2D1C;
+  --destaque: #7F9C96;
 }
 
 * {
@@ -20,11 +20,11 @@
 }
 
 body {
-  background-color: var(--branco);
+  background-color: var(--fundo);
   color: var(--cinza-escuro);
   line-height: 1.6;
   padding: 15px;
-  background-image: linear-gradient(135deg, rgba(255, 187, 156, 0.05), rgba(255, 229, 192, 0.05));
+  background-image: linear-gradient(135deg, rgba(245, 185, 113, 0.05) 0%, rgba(182, 201, 211, 0.05) 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@ body {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  background-color: var(--branco);
+  background-color: var(--fundo);
   border-radius: 25px;
   box-shadow: 0 8px 20px var(--sombra);
   overflow: hidden;
@@ -44,18 +44,14 @@ body {
   max-width: 900px;
 }
 
-/* CABEÇALHO */
 header {
-  background-color: var(--laranja);
-  color: var(--texto-escuro);
+  background-color: var(--primario);
+  color: #000000;
   padding: 15px 20px;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-header * {
-  color: var(--texto-escuro) !important;
 }
 
 .robo-header {
@@ -121,13 +117,13 @@ header h1 {
 }
 
 .mensagem.robo .texto {
-  background-color: var(--branco);
+  background-color: var(--fundo);
   border-radius: 18px 18px 18px 4px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .mensagem.usuario .texto {
-  background-color: var(--laranja);
+  background-color: var(--primario);
   border-radius: 18px 18px 4px 18px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
@@ -136,7 +132,7 @@ header h1 {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background-color: var(--laranja);
+  background-color: var(--primario);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,6 +153,7 @@ header h1 {
   line-height: 1.5;
   font-size: 1.05rem;
 }
+
 .texto p:last-child {
   margin-bottom: 0;
 }
@@ -170,8 +167,9 @@ header h1 {
   width: 100%;
   max-width: 100%;
 }
+
 .receita h3 {
-  color: var(--texto-escuro);
+  color: var(--destaque);
   margin-bottom: 15px;
   font-size: 1.3rem;
   display: flex;
@@ -196,15 +194,19 @@ header h1 {
   font-size: 0.95rem;
   white-space: nowrap;
 }
+
 .info-item span:first-child {
   font-weight: bold;
-  color: var(--texto-escuro);
+  color: var(--destaque);
 }
 
-.ingredientes, .preparo {
+.ingredientes,
+.preparo {
   margin-top: 20px;
 }
-.ingredientes h4, .preparo h4 {
+
+.ingredientes h4,
+.preparo h4 {
   margin-bottom: 10px;
   color: var(--cinza-escuro);
   display: flex;
@@ -228,7 +230,7 @@ li {
   flex-direction: column;
   gap: 12px;
   padding: 15px 20px;
-  background-color: var(--branco);
+  background-color: var(--fundo);
   border-top: 1px solid #eee;
 }
 
@@ -236,7 +238,7 @@ li {
   padding: 14px 20px;
   border: none;
   border-radius: 30px;
-  background-color: var(--laranja);
+  background-color: var(--primario);
   color: var(--cinza-escuro);
   font-size: 1.05rem;
   cursor: pointer;
@@ -245,15 +247,20 @@ li {
   font-weight: 500;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
+
 .btn-resposta:hover {
-  background-color: var(--laranja-hover);
+  background-color: #eaa556;
   transform: translateY(-2px);
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Rodapé */
+.btn-resposta.secundario {
+  background-color: var(--destaque);
+  color: white;
+}
+
 footer {
-  background-color: var(--laranja);
+  background-color: var(--primario);
   color: var(--texto-escuro);
   text-align: center;
   padding: 12px 0;
@@ -263,28 +270,96 @@ footer {
 
 /* Animações */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsividade */
 @media (min-width: 768px) {
-  .container { height: 95vh; margin-top: 2.5vh; }
-  .chat-container { padding: 25px; }
-  .texto { font-size: 1.1rem; max-width: 80%; }
-  .receita { padding: 25px; }
-  .btn-resposta { padding: 16px 25px; font-size: 1.1rem; }
+  .container {
+    height: 95vh;
+    margin-top: 2.5vh;
+  }
+
+  .chat-container {
+    padding: 25px;
+  }
+
+  .texto {
+    font-size: 1.1rem;
+    max-width: 80%;
+  }
+
+  .receita {
+    padding: 25px;
+    max-width: 100%;
+  }
+
+  .btn-resposta {
+    padding: 16px 25px;
+    font-size: 1.1rem;
+  }
 }
+
 @media (max-width: 500px) {
-  .robo-avatar { width: 50px; height: 50px; font-size: 2rem; }
-  header h1 { font-size: 1.3rem; }
-  .status { font-size: 0.8rem; }
-  .chat-container { padding: 15px; gap: 20px; }
-  .mensagem { max-width: 100%; }
-  .avatar { width: 40px; height: 40px; font-size: 1.3rem; }
-  .texto { padding: 12px; font-size: 1.05rem; min-width: 70%; }
-  .receita { padding: 15px; }
-  .btn-resposta { padding: 12px 16px; font-size: 1rem; }
-  .info-receita { gap: 10px; justify-content: space-between; }
-  .info-item { flex: 1 0 45%; margin-bottom: 8px; }
+  .robo-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  .status {
+    font-size: 0.8rem;
+  }
+
+  .chat-container {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .mensagem {
+    max-width: 100%;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+
+  .texto {
+    padding: 12px;
+    font-size: 1.05rem;
+    min-width: 70%;
+  }
+
+  .receita {
+    padding: 15px;
+  }
+
+  .btn-resposta {
+    padding: 12px 16px;
+    font-size: 1rem;
+  }
+
+  .info-receita {
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  .info-item {
+    flex: 1 0 45%;
+    margin-bottom: 8px;
+  }
 }
